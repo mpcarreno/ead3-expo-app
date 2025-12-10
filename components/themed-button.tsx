@@ -6,7 +6,7 @@ type Props = {
   label: string;
   path?: any | null;
   icon?: any | null;
-  onPressAction?: () => void | Promise<void>;
+  onPress?: () => void | Promise<void>;
 
   width?: DimensionValue;
   height?: DimensionValue;
@@ -23,8 +23,7 @@ export default function Button({
   label,
   path,
   icon,
-  onPressAction,
-
+  onPress,
   width = '100%' as DimensionValue,
   height = 60 as DimensionValue,
   backgroundColor = '#2094beff',
@@ -40,7 +39,7 @@ export default function Button({
   const router = useRouter();
 
   const handlePress = async () => {
-    if (onPressAction) await onPressAction();
+    if (onPress) await onPress();
     if (path) router.push(path);
   };
 

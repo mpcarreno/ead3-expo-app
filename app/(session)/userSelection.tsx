@@ -1,12 +1,14 @@
 // newEvaluation.tsx
+import DropdownSearch from "@/components/dropdownSearch";
+import SelectableCard from "@/components/selectableCard";
+import { useSelectedUser } from "@/components/selectedUserContext";
 import { ThemedText } from "@/components/themed-text";
-import { ThemedTextInput } from "@/components/themed-textinput";
 import { ThemedView } from "@/components/themed-view";
-import { useSelectedUser } from "@/scripts/selectedUserContext";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter } from "expo-router"; // si usas expo-router
 import { useEffect, useState } from "react";
-import { FlatList, KeyboardAvoidingView, Platform, Pressable, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { KeyboardAvoidingView, Platform, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+
 
 export default function newEvaluation() {
   const [searchId, setSearchId] = useState("");
@@ -52,6 +54,7 @@ export default function newEvaluation() {
 
     const data = await AsyncStorage.getItem(`user_${uid}`);
     setSelectedId(data ? JSON.parse(data) : null);
+    
   };
 
   // 🔹 Limpiar card si el input cambia y no coincide con el seleccionado
@@ -61,78 +64,57 @@ export default function newEvaluation() {
       setCardSelected(false);
     }
   }, [searchId]);
-
+  
   return (
     <ThemedView style={{ flex: 1 }}>
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : "height"}>
         <ThemedView style={styles.container}>
           
           <ThemedText>Ingrese el número de identificación del paciente</ThemedText>
-          
-          <ThemedTextInput
+
+          <DropdownSearch
             value={searchId}
+            data={storedUids}
             placeholder="Ingrese la identificación del paciente"
             keyboardType="numeric"
-            onChangeText={handleSearch}
+            onChangeValue={handleSearch}
+            onSelect={selectUser}
+            onCreateNew={() => console.log("Crear nuevo usuario")}
           />
 
-          {/* 🔽 Dropdown */}
-          {showDropdown && (
-            <View style={styles.dropdownContainer}>
-              <FlatList
-                data={listResults.length > 0 ? listResults : ["__NO_RESULTS__"]}
-                keyExtractor={(item) => item}
-                keyboardShouldPersistTaps="handled"
-                renderItem={({ item }) => {
-                  if (item === "__NO_RESULTS__") {
-                    return (
-                      <View style={{ padding: 10 }}>
-                        <Text style={styles.noItemText}>No existe el ID</Text>
 
-                        {/* 🔹 BOTÓN Crear nuevo usuario */}
-                        <TouchableOpacity
-                          style={styles.createButton}
-                          onPress={() => console.log("Crear nuevo usuario")}
-                        >
-                          <Text style={styles.createButtonText}>Crear nuevo usuario</Text>
-                        </TouchableOpacity>
-                      </View>
-                    );
-                  }
-
-                  return (
-                    <TouchableOpacity
-                      style={styles.dropdownItem}
-                      onPress={() => selectUser(item)}
-                    >
-                      <Text style={styles.dropdownText}>{item}</Text>
-                    </TouchableOpacity>
-                  );
-                }}
-              />
-            </View>
-          )}
-
-          {/* 🔽 CARD SELECCIONABLE */}
           {selectedId && (
-            <Pressable
-              onPress={() => setCardSelected(!cardSelected)}
-              style={[
-                styles.userInfo,
-                {
-                  backgroundColor: cardSelected ? "#d0e8ff" : "#f3f3f3",
-                  borderColor: cardSelected ? "#007aff" : "#ccc",
-                  borderWidth: 1,
-                }
-              ]}
-            >
-              <Text style={styles.label}>Nombre:</Text>
-              <Text>{selectedId.name} {selectedId.lastName}</Text>
+              <SelectableCard
+                selected={cardSelected}
+                onPress={() => setCardSelected(!cardSelected)}
+              >
+                  <ThemedText style={styles.label}>
+                    {selectedId.name} {selectedId.lastName}
+                  </ThemedText>
+                
+                <View style={styles.cardInformation}>
+                  <ThemedText><ThemedText style={styles.textItem}>{selectedId.uidType}: </ThemedText>
+                    {selectedId.uid}
+                  </ThemedText>
 
-              <Text style={styles.label}>Edad:</Text>
-              <Text>{selectedId.ageAtCreation.rangeName || selectedId.ageAtCreation.range}</Text>
-            </Pressable>
-          )}
+                  <ThemedText><ThemedText style={styles.textItem}>FN: </ThemedText>
+                    {selectedId.dob.day}-{selectedId.dob.month}-{selectedId.dob.year}
+                  </ThemedText>
+                </View>
+
+                <View style={styles.cardInformation}>
+                  <ThemedText><ThemedText style={styles.textItem}>Edad: </ThemedText>
+                    {selectedId.ageAtCreation.ageMonths} Meses {selectedId.ageAtCreation.ageDays} Dias
+                  </ThemedText>
+
+                  <ThemedText><ThemedText style={styles.textItem}>Rango: </ThemedText>
+                    {selectedId.ageAtCreation.range}
+                  </ThemedText>
+                </View>
+                
+              </SelectableCard>
+            )}
+
 
           {cardSelected && (
             <TouchableOpacity
@@ -153,7 +135,13 @@ export default function newEvaluation() {
   );
 }
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
+
+  cardInformation: {
+    flexDirection: "row", 
+    justifyContent: "space-between", 
+    alignItems: "center" 
+  },
   container: { 
     flex: 1, 
     marginHorizontal: 20, 
@@ -169,12 +157,18 @@ const styles = StyleSheet.create({
 
   label: { 
     fontWeight: "bold", 
-    marginTop: 10 
+    fontSize: 20,
+    marginBottom:10,  
+  },
+  textItem: { 
+    fontWeight: "600", 
+    fontSize: 16,
+    marginTop: 2 
   },
 
   continueButton: {
     backgroundColor: "#007aff",
-    padding: 14,
+    padding:20,
     borderRadius: 10,
     alignItems: "center",
     marginTop: 20,

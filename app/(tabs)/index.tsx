@@ -36,7 +36,7 @@ export default function HomeScreen() {
         width={280}
         icon="document.badge.plus" 
         label="Iniciar Nueva Evaluacion"
-        path="/newEvaluation"/>
+        path="/(session)/userSelection"/>
       </ThemedView>
       
       

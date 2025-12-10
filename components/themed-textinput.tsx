@@ -15,7 +15,8 @@ export function ThemedTextInput({
 }: ThemedTextProps) {
     const textColor = useThemeColor({ light: lightColor, dark: darkColor }, 'boxText')
     const boxBackColor = useThemeColor({ light: lightColor, dark: darkColor }, 'boxBackground')
-    const boxBorderColor = useThemeColor({ light: lightColor, dark: darkColor }, 'tint')
+    const boxBorderColor = useThemeColor({ light: lightColor, dark: darkColor }, 'boxBorder')
+    const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text');
     const [isFocused, setIsFocused] = React.useState(false)
 
   return (
@@ -25,6 +26,7 @@ export function ThemedTextInput({
             borderColor: isFocused ? boxBorderColor : 'transparent',
             borderWidth: isFocused ? 2 : 0,
             backgroundColor: boxBackColor,
+            color:color
         },
         styles.default,
         style,

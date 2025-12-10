@@ -1,0 +1,264 @@
+
+[
+  { 
+    "questionId": 1,
+    "range": 1,
+    "question": "Realiza reflejo de búsqueda y reflejo de succión.",
+    "condition": "Pida al cuidador que acaricie la comisura de la boca del bebé y luego introduzca un dedo o chupete en su boca.",
+    "criteria": "Puntúe si el bebé gira la cabeza hacia el lado estimulado y si inicia movimientos rítmicos de succión."
+  },
+  { 
+    "questionId": 2,
+    "range": 1,
+    "question": "El reflejo de moro está presente y es simétrico.",
+    "condition": "Alce al bebé con ambas manos (una bajo la cabeza y otra en la espalda), sosténgalo a unos centímetros de la camilla y desciéndalo de forma rápida pero suave, observando la reacción.",
+    "criteria": "Puntúe si se observa abducción de los brazos con extensión y apertura de manos, seguida de aducción y flexión simétricas de ambos brazos. Puede presentarse llanto."
+  },
+  { 
+    "questionId": 3,
+    "range": 1,
+    "question": "Mueve sus extremidades.",
+    "condition": "Coloque al bebé boca arriba, con las piernas libres, y llame su atención hablándole o tocándolo suavemente (o pida al cuidador que lo haga).",
+    "criteria": "Puntúe si el bebé mueve vigorosa y simétricamente todas las extremidades (ambos brazos y ambas piernas)."
+  },
+
+  { 
+    "questionId": 4,
+    "range": 2,
+    "question": "Sostiene la cabeza al levantarlo de los brazos.",
+    "condition": "Con el bebé acostado boca arriba, tómelo suavemente de ambas manos y levante lentamente su torso unos 20–25 cm.",
+    "criteria": "Puntúe si el bebé sostiene el peso de la cabeza sin dejarla caer hacia atrás en ningún momento."
+  },
+  { 
+    "questionId": 5,
+    "range": 2,
+    "question": "Levanta la cabeza y pecho en prono.",
+    "condition": "Coloque al bebé boca abajo, observe su comportamiento espontáneo y pida al cuidador que llame su atención.",
+    "criteria": "Puntúe si se apoya en los antebrazos y levanta la cabeza y el pecho, manteniéndose así al menos 3 segundos."
+  },
+  { 
+    "questionId": 6,
+    "range": 2,
+    "question": "Gira la cabeza desde la línea media.",
+    "condition": "Con el bebé boca arriba y fuera de su campo visual, produzca un ruido intenso (sonaja, pandereta o aplausos), evitando corrientes de aire.",
+    "criteria": "Puntúe si el bebé gira la cabeza buscando la fuente del sonido."
+  },
+
+  { 
+    "questionId": 7,
+    "range": 3,
+    "question": "Control de cabeza sentado con apoyo.",
+    "condition": "Siente al bebé sobre la camilla o en el regazo del cuidador, sosteniéndolo suavemente por la espalda.",
+    "criteria": "Puntúe si mantiene control de la cabeza y esta no cae bruscamente hacia ningún lado."
+  },
+  { 
+    "questionId": 8,
+    "range": 3,
+    "question": "Se voltea.",
+    "condition": "Coloque al bebé acostado (boca arriba o boca abajo) y llame su atención con ayuda del cuidador o un juguete.",
+    "criteria": "Puntúe si el bebé logra girar de boca arriba a boca abajo o viceversa por sí mismo."
+  },
+  { 
+    "questionId": 9,
+    "range": 3,
+    "question": "Se mantiene sentado momentáneamente.",
+    "condition": "Coloque al bebé sentado, sosteniéndolo por la espalda y retire progresivamente el apoyo.",
+    "criteria": "Puntúe si se mantiene sentado sin apoyo por al menos 3 segundos antes de perder el equilibrio."
+  },
+
+  { 
+    "questionId": 10,
+    "range": 4,
+    "question": "Se mantiene sentado sin apoyo.",
+    "condition": "Coloque al bebé sentado sobre la camilla.",
+    "criteria": "Puntúe si mantiene la posición de sentado sin apoyo y sin caerse."
+  },
+  { 
+    "questionId": 11,
+    "range": 4,
+    "question": "Adopta la posición de sentado.",
+    "condition": "Con el bebé acostado boca arriba, llame su atención usted o el cuidador, usando si es necesario un juguete.",
+    "criteria": "Puntúe si el bebé se incorpora por sí solo desde decúbito hasta sentarse y mantiene la posición con equilibrio."
+  },
+  { 
+    "questionId": 12,
+    "range": 4,
+    "question": "Se arrastra en posición prono.",
+    "condition": "Coloque al bebé boca abajo y llame su atención con ayuda del cuidador usando un juguete atractivo.",
+    "criteria": "Puntúe si se apoya sobre el vientre, hace fuerza con los brazos y empuja con los pies, logrando arrastrarse hacia adelante aunque aún no gatee en cuatro apoyos."
+  },
+
+  { 
+    "questionId": 13,
+    "range": 5,
+    "question": "Gatea con desplazamiento cruzado (alternando rodillas y manos).",
+    "condition": "Con el bebé boca abajo, llame su atención utilizando un juguete de interés y anímelo a desplazarse.",
+    "criteria": "Puntúe si gatea apoyado en manos y rodillas, alternando rodillas y manos y desplazándose al menos un metro."
+  },
+  { 
+    "questionId": 14,
+    "range": 5,
+    "question": "Adopta posición bípeda y se sostiene de pie con apoyo.",
+    "condition": "Siéntelo en el piso y atraiga su atención hacia una mesa baja o las rodillas del cuidador.",
+    "criteria": "Puntúe si se agarra de la mesa o del cuidador con una o ambas manos, se pone de pie y se mantiene en esa posición con apoyo durante unos segundos."
+  },
+  { 
+    "questionId": 15,
+    "range": 5,
+    "question": "Se sostiene de pie sin apoyo.",
+    "condition": "Coloque al niño en bipedestación lejos de apoyos o riesgos, listo para protegerlo si pierde el equilibrio.",
+    "criteria": "Puntúe si se mantiene de pie sin agarrarse de ningún objeto ni del cuidador por al menos 2 segundos."
+  },
+
+  { 
+    "questionId": 16,
+    "range": 6,
+    "question": "Se pone de pie sin ayuda.",
+    "condition": "Con el niño sentado en el piso, llame su atención ofreciéndole un juguete a una altura que lo motive a ponerse de pie.",
+    "criteria": "Puntúe si se pone de pie sin utilizar apoyo del cuidador ni de muebles y se mantiene en bipedestación sin perder el equilibrio."
+  },
+  { 
+    "questionId": 17,
+    "range": 6,
+    "question": "Da pasos solo(a).",
+    "condition": "Observe la conducta espontánea del niño; si no camina, colóquese a corta distancia y llame su atención con un juguete.",
+    "criteria": "Puntúe si logra dar al menos 4–5 pasos consecutivos sin apoyo antes de perder el equilibrio."
+  },
+  { 
+    "questionId": 18,
+    "range": 6,
+    "question": "Camina con desplazamiento cruzado sin ayuda (alternando manos y pies).",
+    "condition": "Observe el desplazamiento del niño mientras camina libremente.",
+    "criteria": "Puntúe si camina erguido, sin arrastrar los pies, alternando brazos y piernas y manteniendo el equilibrio (no importa el número de pasos)."
+  },
+
+  { 
+    "questionId": 19,
+    "range": 7,
+    "question": "Corre.",
+    "condition": "Observe el juego espontáneo del niño o invítelo a correr por el espacio.",
+    "criteria": "Puntúe si corre alternando los pies sin arrastrarlos, aunque la velocidad sea baja."
+  },
+  { 
+    "questionId": 20,
+    "range": 7,
+    "question": "Lanza la pelota.",
+    "condition": "Muéstrele cómo lanzar una pelota hacia adelante; luego sitúese a 2–3 pasos de distancia frente al niño y entréguele la pelota indicándole que la lance.",
+    "criteria": "Puntúe si lanza la pelota hacia el frente con una o ambas manos, sin necesidad de que pase por encima de la cabeza."
+  },
+  { 
+    "questionId": 21,
+    "range": 7,
+    "question": "Patea la pelota.",
+    "condition": "Demuestre cómo patear una pelota; luego colóquela quieta a 2–3 pasos del niño e invítelo a patearla.",
+    "criteria": "Puntúe si el niño logra patear la pelota, aunque no corra previamente."
+  },
+
+  { 
+    "questionId": 22,
+    "range": 8,
+    "question": "Salta con los pies juntos.",
+    "condition": "Muéstrele cómo saltar con los dos pies juntos e invítelo a imitarle.",
+    "criteria": "Puntúe si despega simultáneamente ambos pies del piso y cae sin perder el equilibrio en al menos dos saltos consecutivos."
+  },
+  { 
+    "questionId": 23,
+    "range": 8,
+    "question": "Se empina en ambos pies.",
+    "condition": "Muéstrele cómo ponerse de puntas de pie y pídale que lo imite.",
+    "criteria": "Puntúe si puede elevarse sobre la punta de ambos pies y mantenerse erguido unos segundos sin perder el equilibrio."
+  },
+  { 
+    "questionId": 24,
+    "range": 8,
+    "question": "Sube dos escalones sin apoyo.",
+    "condition": "Ubique una escalerilla de dos escalones en el centro del espacio y al niño al pie de esta; pídale que suba solo.",
+    "criteria": "Puntúe si sube los dos escalones sin sostenerse de pared, baranda ni mano de adulto y sin perder el equilibrio."
+  },
+
+  { 
+    "questionId": 25,
+    "range": 9,
+    "question": "Camina en puntas de pies.",
+    "condition": "Explique y muestre cómo caminar en puntas; pídale que lo haga sobre el piso.",
+    "criteria": "Puntúe si camina al menos 2 metros en puntas de pies, sin bajar los talones y sin perder el equilibrio, alternando los pies."
+  },
+  { 
+    "questionId": 26,
+    "range": 9,
+    "question": "Se para en un solo pie.",
+    "condition": "Muéstrele cómo pararse en un solo pie; pídale que lo imite (idealmente descalzo y sin medias).",
+    "criteria": "Puntúe si permanece de pie en un solo pie por al menos 2 segundos sin apoyar el talón levantado ni perder el equilibrio."
+  },
+  { 
+    "questionId": 27,
+    "range": 9,
+    "question": "Baja dos escalones con apoyo mínimo, alternando los pies.",
+    "condition": "Coloque al niño en la parte alta de una escalerilla de dos escalones y pídale que baje; si es necesario, demuestre la acción.",
+    "criteria": "Puntúe si baja los dos escalones alternando los pies y solo se apoya en pared o baranda (no en la mano de un adulto) sin perder el equilibrio."
+  },
+
+  { 
+    "questionId": 28,
+    "range": 10,
+    "question": "Camina sobre una línea recta sin apoyo visual.",
+    "condition": "Coloque una cinta o línea recta en el piso; muestre cómo caminar sobre ella mirando al frente y pídale que lo imite.",
+    "criteria": "Puntúe si recorre al menos 2 metros sobre la línea, alternando los pies, sin salirse, sin devolverse, sin repetir el mismo apoyo y sin mirar al piso."
+  },
+  { 
+    "questionId": 29,
+    "range": 10,
+    "question": "Salta en tres o más ocasiones en un pie.",
+    "condition": "Muéstrele cómo saltar en un solo pie en el mismo sitio e invítelo a repetirlo.",
+    "criteria": "Puntúe si logra saltar en un solo pie en el mismo sitio al menos 3 veces seguidas sin perder el equilibrio."
+  },
+  { 
+    "questionId": 30,
+    "range": 10,
+    "question": "Hace rebotar y agarra la pelota.",
+    "condition": "Muéstrele cómo hacer rebotar una pelota con ambas manos y atraparla al final; luego pídale que haga lo mismo.",
+    "criteria": "Puntúe si hace rebotar y atrapa la pelota al menos dos veces consecutivas."
+  },
+  { 
+    "questionId": 31,
+    "range": 11,
+    "question": "Hace “caballitos” (alternando los pies).",
+    "condition": "Demuestre “caballitos” (saltos con desplazamiento alternando los pies) e invítelo a imitarle, preferiblemente descalzo.",
+    "criteria": "Puntúe si realiza al menos 3 saltos desplazándose hacia adelante alternando los pies."
+  },
+  { 
+    "questionId": 32,
+    "range": 11,
+    "question": "Salta de lado a lado de una línea con los pies juntos.",
+    "condition": "Trace una línea en el piso y muestre cómo saltar de un lado al otro con los pies juntos; pídale que lo haga.",
+    "criteria": "Puntúe si salta de un lado al otro de la línea al menos 3 veces consecutivas cayendo con los pies juntos."
+  },
+  { 
+    "questionId": 33,
+    "range": 11,
+    "question": "Salta desplazándose con ambos pies.",
+    "condition": "Muestre cómo saltar hacia adelante con los pies juntos, recorriendo al menos 60 cm sobre una cinta marcada.",
+    "criteria": "Puntúe si salta una distancia de al menos 60 cm, cayendo con ambos pies juntos en el símbolo indicado o más allá."
+  },
+  { 
+    "questionId": 34,
+    "range": 12, 
+    "question": "Mantiene el equilibrio en la punta de los pies con los ojos cerrados.",
+    "condition": "Pida al niño(a) que se pare en la punta de sus pies y que cierre los ojos. Si no lo logra en el primer intento, repita el procedimiento hasta dos veces. Asegúrese de que esté descalzo(a) y sin medias.",
+    "criteria": "Puntúe si el niño(a) mantiene el equilibrio en punta de pies con los ojos cerrados durante al menos 3 segundos, sin bajar los talones al piso en ningún momento."
+  },
+  { 
+    "questionId": 35,
+    "range": 12, 
+    "question": "Realiza saltos alternados en secuencia.",
+    "condition": "Muéstrele al niño(a) la secuencia: 1) salto cayendo en dos pies, 2) salto cayendo en un pie y 3) simular recoger un objeto del piso permaneciendo en un solo pie sin perder el equilibrio ni bajar ese pie al piso. Pídale que haga lo mismo. Repita hasta dos veces si no lo logra al primer intento. El niño(a) debe estar descalzo(a) y sin medias.",
+    "criteria": "Puntúe si el niño(a) realiza la secuencia completa de saltos y recogida del objeto sin perder el equilibrio."
+  },
+  { 
+    "questionId": 36,
+    "range": 12, 
+    "question": "Realiza alguna actividad de integración motora.",
+    "condition": "Pregúntele al niño(a) o al cuidador(a) si el niño(a) realiza alguna actividad física. Si la respuesta es afirmativa, indague qué actividad realiza, cómo la ejecuta y desde hace cuánto tiempo la practica (por ejemplo, si monta bicicleta al menos una cuadra sin caerse, si nada alternando brazos y piernas o si sigue las secuencias de una danza). Verifique que lleve al menos un mes practicándola.",
+    "criteria": "Puntúe si el niño(a) realiza de forma habitual alguna actividad física que implique integración motora (como montar bicicleta, nadar coordinando brazos y piernas, seguir secuencias de danza, etc.) y la ha practicado durante por lo menos un mes."
+  }
+]

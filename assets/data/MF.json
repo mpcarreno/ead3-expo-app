@@ -1,0 +1,254 @@
+[
+  { 
+    "questionId": 1,
+    "range": 1, 
+    "question": "Reflejo de prensión palmar.",
+    "condition": "Coloque su dedo o el del cuidador en la palma de la mano del bebé y espere su respuesta.",
+    "criteria": "Puntúe si el bebé aprieta el dedo cerrando toda la mano alrededor de este."
+  },
+  { 
+    "questionId": 2,
+    "range": 1, 
+    "question": "Reacciona ante luz y sonidos.",
+    "condition": "Acueste al bebé boca arriba, sitúese fuera de su campo visual y produzca un sonido o ilumine el entorno con una luz.",
+    "criteria": "Puntúe si el bebé muestra reacción ante el sonido o la luz, como movimiento corporal aumentado o respuesta vocal."
+  },
+  { 
+    "questionId": 3,
+    "range": 1, 
+    "question": "Sigue movimiento horizontal.",
+    "condition": "Con el bebé acostado boca arriba, muéstrele un objeto de color y desplace el objeto lentamente de izquierda a derecha.",
+    "criteria": "Puntúe si el bebé mueve los ojos siguiendo el desplazamiento horizontal del objeto."
+  },
+  { 
+    "questionId": 4,
+    "range": 2, 
+    "question": "Abre y mira sus manos.",
+    "condition": "Observe al bebé acostado boca arriba durante la valoración, sin intervenir en su juego espontáneo.",
+    "criteria": "Puntúe si en algún momento lleva una o ambas manos a la línea media y las observa algunos segundos mientras mueve los dedos o abre y cierra las manos."
+  },
+  { 
+    "questionId": 5,
+    "range": 2, 
+    "question": "Sostiene objeto en la mano.",
+    "condition": "Con el bebé acostado o sentado en el regazo del cuidador, llame su atención con un cubo pequeño y acérquelo a su mano facilitando la prensión.",
+    "criteria": "Puntúe si el bebé agarra el objeto y lo mantiene en la mano sin soltarlo por al menos 3 segundos."
+  },
+  { 
+    "questionId": 6,
+    "range": 2, 
+    "question": "Se lleva un objeto a la boca.",
+    "condition": "Con el bebé acostado o sentado en el regazo del cuidador, ofrézcale un objeto llamativo al alcance de su mano.",
+    "criteria": "Puntúe si el bebé agarra un objeto y se lo lleva a la boca durante la observación."
+  },
+  { 
+    "questionId": 7,
+    "range": 3, 
+    "question": "Agarra objetos voluntariamente.",
+    "condition": "Con el bebé acostado o sentado en el regazo del cuidador, coloque varios juguetes pequeños llamativos a su alcance y observe su comportamiento.",
+    "criteria": "Puntúe si el bebé dirige voluntariamente sus manos hacia los objetos y logra agarrar por lo menos uno, manteniéndolo en sus manos alrededor de 3 segundos."
+  },
+  { 
+    "questionId": 8,
+    "range": 3, 
+    "question": "Retiene un objeto cuando se lo intentan quitar.",
+    "condition": "Mientras el bebé manipula juguetes, intente retirar uno de ellos suavemente.",
+    "criteria": "Puntúe si el bebé se resiste y retiene el objeto al menos durante 2 segundos."
+  },
+  { 
+    "questionId": 9,
+    "range": 3, 
+    "question": "Pasa objeto de una mano a otra.",
+    "condition": "Con el bebé acostado o sentado y varios objetos llamativos a su alcance, observe mientras los manipula.",
+    "criteria": "Puntúe si el bebé toma un objeto y lo transfiere de una mano a la otra en algún momento de la valoración."
+  },
+  { 
+    "questionId": 10,
+    "range": 4, 
+    "question": "Sostiene un objeto en cada mano.",
+    "condition": "Con el bebé sentado en el regazo del cuidador, ofrézcale dos objetos iguales y espere a que los agarre.",
+    "criteria": "Puntúe si el bebé sostiene un objeto en cada mano y los mantiene sin soltarlos por al menos 5 segundos."
+  },
+  { 
+    "questionId": 11,
+    "range": 4, 
+    "question": "Deja caer los objetos intencionalmente.",
+    "condition": "Observe el juego espontáneo del bebé mientras manipula juguetes durante la prueba.",
+    "criteria": "Puntúe si deja caer un juguete de manera intencional, no accidental."
+  },
+  { 
+    "questionId": 12,
+    "range": 4, 
+    "question": "Agarra con pulgar e índice (pinza).",
+    "condition": "Durante la manipulación de objetos pequeños, observe la forma en que el bebé los toma.",
+    "criteria": "Puntúe si el bebé agarra al menos un objeto usando pinza entre pulgar e índice."
+  },
+  { 
+    "questionId": 13,
+    "range": 5, 
+    "question": "Agarra tercer objeto sin soltar otros.",
+    "condition": "Entregue al bebé dos objetos, uno en cada mano; luego ofrezca un tercer objeto llamativo.",
+    "criteria": "Puntúe si recibe el tercer objeto sin soltar los anteriores y mantiene los tres en las manos por al menos 3 segundos."
+  },
+  { 
+    "questionId": 14,
+    "range": 5, 
+    "question": "Saca objetos del contenedor.",
+    "condition": "Con el niño sentado, ofrezca un contenedor con objetos llamativos, destápelo, muestre el contenido y deje el contenedor a su alcance.",
+    "criteria": "Puntúe si saca por lo menos dos objetos del contenedor, independientemente del tipo de prensión que utilice."
+  },
+  { 
+    "questionId": 15,
+    "range": 5, 
+    "question": "Busca objetos escondidos.",
+    "condition": "Con el niño sentado, muestre un juguete pequeño atractivo y escóndalo bajo una taza mientras el niño observa; repita el procedimiento tres veces.",
+    "criteria": "Puntúe si sigue con la mirada la trayectoria, busca y recupera el objeto en al menos dos de los tres ensayos."
+  },
+  { 
+    "questionId": 16,
+    "range": 6, 
+    "question": "Hace torre de tres cubos.",
+    "condition": "Con el niño sentado frente a la mesa, muéstrele cómo hacer una torre con cubos y pídale que la imite.",
+    "criteria": "Puntúe si logra construir una torre de por lo menos tres cubos siguiendo el modelo."
+  },
+  { 
+    "questionId": 17,
+    "range": 6, 
+    "question": "Pasa hojas de un libro.",
+    "condition": "Con el niño sentado, entregue un libro de cuentos o revista con dibujos y déjelo a su alcance algunos minutos.",
+    "criteria": "Puntúe si el niño pasa las hojas del libro utilizando su mano, sin importar el tipo de agarre."
+  },
+  { 
+    "questionId": 18,
+    "range": 6, 
+    "question": "Agarra una cuchara y se la lleva a la boca.",
+    "condition": "Con el niño sentado, muéstrele una cuchara de plástico, déjela a su alcance unos minutos y observe su conducta.",
+    "criteria": "Puntúe si toma la cuchara, la sostiene y se la lleva a la boca."
+  },
+  { 
+    "questionId": 19,
+    "range": 7, 
+    "question": "Garabatea espontáneamente.",
+    "condition": "Siente al niño frente a la mesa, coloque una hoja y una crayola, muéstrele brevemente cómo hacer rayones y luego deje que actúe.",
+    "criteria": "Puntúe si agarra la crayola y realiza garabatos firmes sobre el papel, con trazos en varias direcciones."
+  },
+  { 
+    "questionId": 20,
+    "range": 7, 
+    "question": "Quita la tapa del contenedor o frasco de muestra de orina.",
+    "condition": "Muéstrele cómo se cierra un contenedor enroscando la tapa una vuelta completa y luego colóquelo sobre la mesa pidiéndole que quite la tapa, sin mostrarle cómo abrir.",
+    "criteria": "Puntúe si el niño desenrosca la tapa hasta retirarla, sin halar ni forzarla."
+  },
+  { 
+    "questionId": 21,
+    "range": 7, 
+    "question": "Hace torre de cinco cubos.",
+    "condition": "Con el niño sentado, construya una torre de cubos frente a él y solicite que haga una igual.",
+    "criteria": "Puntúe si reproduce una torre de al menos cinco cubos siguiendo el modelo."
+  },
+  { 
+    "questionId": 22,
+    "range": 8, 
+    "question": "Ensarta cuentas perforadas con pinza.",
+    "condition": "Muéstrele cómo ensartar cuentas perforadas en un cordón, deje el material a su disposición y pídale que repita la actividad.",
+    "criteria": "Puntúe si ensarta al menos tres cuentas, tomando el cordón con movimiento de pinza."
+  },
+  { 
+    "questionId": 23,
+    "range": 8, 
+    "question": "Rasga papel con pinza de ambas manos.",
+    "condition": "Muéstrele cómo rasgar papel alternando ambas manos con prensión de pinza y pídale que lo haga igual.",
+    "criteria": "Puntúe si rasga al menos un fragmento de papel utilizando movimiento de pinza con ambas manos de forma alternada."
+  },
+  { 
+    "questionId": 24,
+    "range": 8, 
+    "question": "Copia línea horizontal y vertical.",
+    "condition": "Dibuje una línea horizontal, deje papel y crayola al alcance y pídale que haga una igual; repita si es necesario y luego haga lo mismo con una línea vertical.",
+    "criteria": "Puntúe si logra reproducir al menos una línea horizontal y una vertical, claramente definidas aunque no perfectamente rectas."
+  },
+  { 
+    "questionId": 25,
+    "range": 9, 
+    "question": "Hace una bola de papel con sus dedos.",
+    "condition": "Muéstrele cómo hacer una bolita de papel delgado con los dedos y luego solicite que lo imite.",
+    "criteria": "Puntúe si el niño forma una bola de papel usando sus dedos."
+  },
+  { 
+    "questionId": 26,
+    "range": 9, 
+    "question": "Copia círculo.",
+    "condition": "Dibuje un círculo como modelo y pídale al niño que haga uno igual.",
+    "criteria": "Puntúe si dibuja un círculo cerrado (si hay abertura debe ser pequeña), sin ser una figura hecha solo de líneas rectas ni de muchos trazos superpuestos."
+  },
+  { 
+    "questionId": 27,
+    "range": 9, 
+    "question": "Figura humana rudimentaria.",
+    "condition": "Entregue papel y crayola y pídale: \"Dibuja aquí una persona\".",
+    "criteria": "Puntúe si el dibujo permite reconocer una figura humana con cabeza y ojos, acompañada de tronco o de extremidades, aunque falten otros detalles."
+  },
+  { 
+    "questionId": 28,
+    "range": 10, 
+    "question": "Imita el dibujo de una escalera.",
+    "condition": "Dibuje una escalera con dos líneas verticales paralelas y por lo menos cuatro travesaños, y pida al niño que la copie.",
+    "criteria": "Puntúe si reproduce las dos líneas verticales y al menos cuatro travesaños rectos y definidos, aunque no mantenga las proporciones exactas."
+  },
+  { 
+    "questionId": 29,
+    "range": 10, 
+    "question": "Corta papel con las tijeras.",
+    "condition": "Ofrezca una ficha de cartulina pequeña y tijeras de seguridad; pídale que corte la ficha, pudiendo mostrar brevemente cómo se hace el corte.",
+    "criteria": "Puntúe si realiza un corte limpio en la cartulina con las tijeras, aunque no sea recto ni atraviese toda la ficha, y sin que sea solo un rasgado."
+  },
+  { 
+    "questionId": 30,
+    "range": 10, 
+    "question": "Figura humana 2.",
+    "condition": "Entregue papel y crayola y vuelva a pedir: \"Dibuja aquí una persona\".",
+    "criteria": "Puntúe si la figura humana incluye al menos cabeza con ojos y boca, tronco y miembros superiores e inferiores reconocibles."
+  },
+  { 
+    "questionId": 31,
+    "range": 11, 
+    "question": "Dibuja el lugar en el que vive.",
+    "condition": "Pídale al niño que dibuje el lugar donde vive, con los elementos que considere importantes para que pueda reconocerse.",
+    "criteria": "Puntúe si el dibujo representa claramente un lugar de habitación (por ejemplo, casa o cuarto) con elementos básicos como puerta, ventanas, techo u otros similares."
+  },
+  { 
+    "questionId": 32,
+    "range": 11, 
+    "question": "Modelo de cubos \"escalera\".",
+    "condition": "Construya una escalera con 10 cubos, pida al niño que la observe, derríbela y explíquele que debe hacerla igual.",
+    "criteria": "Puntúe si en un solo intento reproduce correctamente la escalera con los 10 cubos, igual al modelo."
+  },
+  { 
+    "questionId": 33,
+    "range": 11, 
+    "question": "Copia de un triángulo.",
+    "condition": "Muéstrele cómo dibujar un triángulo y pídale que haga uno igual.",
+    "criteria": "Puntúe si dibuja un triángulo con tres ángulos cerrados claramente identificables."
+  },
+  { 
+    "questionId": 34,
+    "range": 12, 
+    "question": "Copia de una figura de puntos.",
+    "condition": "Presente un modelo de figura formada por puntos y una cuadrícula vacía; indique que debe hacer la misma figura en el espacio vacío siguiendo los puntos.",
+    "criteria": "Puntúe si logra una figura idéntica en ubicación, proporciones y ángulos, siguiendo los puntos sin repasar ni corregir los trazos."
+  },
+  { 
+    "questionId": 35,
+    "range": 12, 
+    "question": "Puede hacer una figura plegada.",
+    "condition": "Muéstrele paso a paso cómo plegar un papel para formar una figura (perro) y pídale que lo imite.",
+    "criteria": "Puntúe si realiza la figura plegada con dobleces bien definidos que se mantienen, y la separación inicial de las puntas no es excesiva."
+  },
+  { 
+    "questionId": 36,
+    "range": 12, 
+    "question": "Ensarta cordón cruzado (como amarrarse los zapatos).",
+    "condition": "Utilice un modelo de zapato de enhebrado, muéstrele cómo pasar el cordón en forma cruzada y hacer un nudo tipo \"orejas de conejo\" sin voltear el modelo, y pídale que lo haga.",
+    "criteria": "Puntúe si el niño coloca el cordón en un patrón cruzado en el modelo y realiza el nudo, sin girar el zapato para completar la tarea."
+  }
+]

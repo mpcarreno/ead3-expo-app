@@ -6,7 +6,7 @@ import ThemedCheckBox from "@/components/themed-checkbox";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedTextInput } from "@/components/themed-textinput";
 import { ThemedView } from "@/components/themed-view";
-import { saveUser } from "@/scripts/saveuser";
+import { saveUser } from "@/utils/saveuser";
 import { router } from "expo-router";
 import { useState } from "react";
 import { Alert, KeyboardAvoidingView, Platform, ScrollView, StyleSheet } from "react-native";
@@ -192,7 +192,8 @@ export default function UserCreation() {
 
             <Spacer height={20} />
 
-            <Button  label="Guardar Usuario" onPressAction={onSave} />
+            <Button  label="Crear Usuario" onPress={onSave} />
+            
           </ThemedView>
         </ScrollView>
       </KeyboardAvoidingView>
@@ -201,7 +202,7 @@ export default function UserCreation() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, marginHorizontal: 20, marginBottom: 50  },
+  container: { flex: 1, padding:20, marginBottom: 50  },
   text: { marginTop: 10},
   mandatory: { color: "red"},
   inputError: { borderColor: "red", borderWidth: 2 },

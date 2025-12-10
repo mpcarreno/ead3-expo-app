@@ -1,0 +1,265 @@
+[
+  {
+    "questionId": 1,
+    "range": 1,
+    "question": "Se sobresalta con un ruido.",
+    "condition": "Coloque al bebé en posición acostado boca-arriba sobre la camilla. Colóquese fuera de su campo visual a una distancia de uno a dos metros. Haga un ruido fuerte (más fuerte que un aplauso o el sonido de una campana). Observe la reacción del bebé.",
+    "criteria": "Puntúe si el bebé reacciona ante el sonido, cambiando inmediatamente su actividad, extendiendo los brazos agitadamente o llorando."
+  },
+  {
+    "questionId": 2,
+    "range": 1,
+    "question": "Contempla momentáneamente a una persona.",
+    "condition": "Coloque al bebé en posición acostado boca-arriba sobre la camilla. Acérquese háblele, haga variaciones en el tono, volumen o duración del sonido de las palabras o cántele suavemente.",
+    "criteria": "Puntúe si el bebé fija su mirada en usted al menos por 2 segundos."
+  },
+  {
+    "questionId": 3,
+    "range": 1,
+    "question": "Llora para expresar necesidades.",
+    "condition": "Indague con el cuidador si el bebé llora cuando tiene el pañal sucio, cuando tiene frío o calor y cuando tiene hambre.",
+    "criteria": "Puntúe si el cuidador responde que ha observado en el bebé este tipo de comportamiento."
+  },
+
+  {
+    "questionId": 4,
+    "range": 2,
+    "question": "Se tranquiliza con la voz humana.",
+    "condition": "Observe el comportamiento espontáneo del bebé, cuando está agitado, incómodo o molesto y pídale al cuidador que le hable para tranquilizarlo.",
+    "criteria": "Puntúe si el bebé se calma con la voz del cuidador."
+  },
+  {
+    "questionId": 5,
+    "range": 2,
+    "question": "Produce sonidos guturales indiferenciados.",
+    "condition": "Escuche atentamente los balbuceos espontáneos del bebé, puede motivarlo con sonidos y muecas frente a frente.",
+    "criteria": "Puntúe si el bebé emite sonidos guturales indiferenciados."
+  },
+  {
+    "questionId": 6,
+    "range": 2,
+    "question": "Busca el sonido con la mirada.",
+    "condition": "Coloque al bebé boca-arriba. Fuera de su campo visual haga sonar una pandereta primero a la derecha y luego a la izquierda.",
+    "criteria": "Puntúe si el bebé busca con sus ojos el origen del sonido al menos una vez en ambas direcciones."
+  },
+
+  {
+    "questionId": 7,
+    "range": 3,
+    "question": "Busca diferentes sonidos con la mirada.",
+    "condition": "Realice diferentes sonidos fuera del campo visual del bebé (hablar, arrugar papel, cantar, aplaudir).",
+    "criteria": "Puntúe si el bebé busca con sus ojos el origen de al menos tres sonidos diferentes."
+  },
+  {
+    "questionId": 8,
+    "range": 3,
+    "question": "Pone atención a la conversación.",
+    "condition": "Ubíquese dentro del campo visual del bebé y converse con el cuidador.",
+    "criteria": "Puntúe si el bebé observa, sonríe o vocaliza mientras escucha la conversación."
+  },
+  {
+    "questionId": 9,
+    "range": 3,
+    "question": "Produce cuatro o más sonidos diferentes.",
+    "condition": "Escuche las vocalizaciones del bebé durante la valoración.",
+    "criteria": "Puntúe si el bebé emite al menos cuatro sonidos diferentes."
+  },
+
+  {
+    "questionId": 10,
+    "range": 4,
+    "question": "Pronuncia tres o más sílabas.",
+    "condition": "Escuche las vocalizaciones del bebé durante la valoración.",
+    "criteria": "Puntúe si emite al menos tres sílabas diferenciables."
+  },
+  {
+    "questionId": 11,
+    "range": 4,
+    "question": "Reacciona cuando se le llama por su nombre.",
+    "condition": "Llámelo por su nombre desde fuera del campo visual.",
+    "criteria": "Puntúe si el bebé gira la cabeza o busca con la mirada hacia la voz."
+  },
+  {
+    "questionId": 12,
+    "range": 4,
+    "question": "Reacciona a tres palabras familiares.",
+    "condition": "El cuidador pronuncia palabras familiares para el bebé.",
+    "criteria": "Puntúe si el bebé cambia la expresión, vocaliza o imita la palabra."
+  },
+
+  {
+    "questionId": 13,
+    "range": 5,
+    "question": "Reacciona a la palabra no.",
+    "condition": "Entréguele un objeto y diga “No-no” en tono firme cuando intente tomarlo.",
+    "criteria": "Puntúe si detiene la acción al escuchar la prohibición."
+  },
+  {
+    "questionId": 14,
+    "range": 5,
+    "question": "Llama al cuidador.",
+    "condition": "Observe la interacción espontánea con el cuidador.",
+    "criteria": "Puntúe si usa vocalizaciones tipo mamá–papá o llama por apodo o nombre."
+  },
+  {
+    "questionId": 15,
+    "range": 5,
+    "question": "Responde a una instrucción sencilla.",
+    "condition": "Dé instrucciones como: “Dame el perro”, “pásame el caballo”.",
+    "criteria": "Puntúe si responde correctamente al menos dos instrucciones."
+  },
+
+  {
+    "questionId": 16,
+    "range": 6,
+    "question": "Aproximación a una palabra con intención comunicativa.",
+    "condition": "Observe el comportamiento espontáneo del niño(a) durante la valoración.",
+    "criteria": "Puntúe si produce una aproximación a palabra con intención comunicativa."
+  },
+  {
+    "questionId": 17,
+    "range": 6,
+    "question": "Reconoce al menos 6 objetos o imágenes.",
+    "condition": "Utilice una imagen con objetos y pregunte dónde está cada uno.",
+    "criteria": "Puntúe si señala correctamente al menos seis."
+  },
+  {
+    "questionId": 18,
+    "range": 6,
+    "question": "Sigue instrucciones de dos pasos.",
+    "condition": "Dé instrucciones como: “Toma el perro y ponlo en el piso”.",
+    "criteria": "Puntúe si cumple correctamente al menos dos instrucciones de dos pasos."
+  },
+
+  {
+    "questionId": 19,
+    "range": 7,
+    "question": "Nombra cinco objetos de una imagen.",
+    "condition": "Muéstrele una imagen con múltiples objetos y pregunte qué es cada uno.",
+    "criteria": "Puntúe si nombra al menos cinco objetos."
+  },
+  {
+    "questionId": 20,
+    "range": 7,
+    "question": "Utiliza más de 20 palabras.",
+    "condition": "Pregúntele al cuidador qué palabras usa el niño(a).",
+    "criteria": "Puntúe si usa más de 20 palabras incluso aproximadas."
+  },
+  {
+    "questionId": 21,
+    "range": 7,
+    "question": "Usa frase de dos palabras.",
+    "condition": "Observe el lenguaje espontáneo durante la prueba.",
+    "criteria": "Puntúe si produce frases de dos o más palabras con sentido."
+  },
+
+  {
+    "questionId": 22,
+    "range": 8,
+    "question": "Dice su nombre completo.",
+    "condition": "Pregunte: “¿Cómo te llamas?”.",
+    "criteria": "Puntúe si dice nombre y apellido de forma entendible."
+  },
+  {
+    "questionId": 23,
+    "range": 8,
+    "question": "Dice frases de 3 palabras.",
+    "condition": "Observe el lenguaje espontáneo.",
+    "criteria": "Puntúe si produce frases de tres palabras."
+  },
+  {
+    "questionId": 24,
+    "range": 8,
+    "question": "Reconoce cualidades de los objetos.",
+    "condition": "Pregunte el color, tamaño, forma, uso, etc.",
+    "criteria": "Puntúe si describe cualidades en al menos dos objetos."
+  },
+
+  {
+    "questionId": 25,
+    "range": 9,
+    "question": "Define por su uso cinco objetos.",
+    "condition": "Pregunte para qué sirve lápiz, cuchara, silla, llave, etc.",
+    "criteria": "Puntúe si define por su uso al menos cinco objetos."
+  },
+  {
+    "questionId": 26,
+    "range": 9,
+    "question": "Hace comparativos.",
+    "condition": "Muéstrele imágenes comparativas y pida que identifique diferencias.",
+    "criteria": "Puntúe si hace al menos dos comparaciones."
+  },
+  {
+    "questionId": 27,
+    "range": 9,
+    "question": "Describe el dibujo.",
+    "condition": "Muéstrele una imagen y pregunte qué sucede ahí.",
+    "criteria": "Puntúe si elabora historia o describe acciones respondiendo tres preguntas básicas."
+  },
+
+  {
+    "questionId": 28,
+    "range": 10,
+    "question": "Denomina 5 colores.",
+    "condition": "Muéstrele una imagen con colores y pida que los nombre.",
+    "criteria": "Puntúe si nombra correctamente al menos cinco colores."
+  },
+  {
+    "questionId": 29,
+    "range": 10,
+    "question": "Responde tres preguntas sobre un relato.",
+    "condition": "Lea un relato y formule tres preguntas básicas.",
+    "criteria": "Puntúe si responde correctamente las tres preguntas."
+  },
+  {
+    "questionId": 30,
+    "range": 10,
+    "question": "Elabora un relato a partir de una imagen.",
+    "condition": "Muéstrele una secuencia de imágenes y pida que cuente lo que ocurre.",
+    "criteria": "Puntúe si el relato es coherente y acorde con la imagen."
+  },
+
+  {
+    "questionId": 31,
+    "range": 11,
+    "question": "Expresa opiniones.",
+    "condition": "Pregunte su opinión sobre un dibujo, juego o actividad.",
+    "criteria": "Puntúe si expresa opinión con lenguaje organizado."
+  },
+  {
+    "questionId": 32,
+    "range": 11,
+    "question": "Repite palabras con pronunciación correcta.",
+    "condition": "Pídale repetir palabras con fonemas complejos.",
+    "criteria": "Puntúe si repite todas con pronunciación correcta."
+  },
+  {
+    "questionId": 33,
+    "range": 11,
+    "question": "Absurdos visuales.",
+    "condition": "Realice acciones absurdas y pregunte qué nota.",
+    "criteria": "Puntúe si identifica el absurdo y lo explica."
+  },
+
+  {
+    "questionId": 34,
+    "range": 12,
+    "question": "Identifica palabras que inician con sonidos parecidos.",
+    "condition": "Lea palabras como Casa–Cama, Mata–Masa, Nudo–Nube.",
+    "criteria": "Puntúe si identifica correctamente al menos dos pares."
+  },
+  {
+    "questionId": 35,
+    "range": 12,
+    "question": "Conoce: ayer, hoy y mañana.",
+    "condition": "Pregunte: ¿Qué hiciste ayer?, ¿Qué haces hoy?, ¿Qué harás mañana?",
+    "criteria": "Puntúe si logra ubicar actividades en pasado, presente y futuro."
+  },
+  {
+    "questionId": 36,
+    "range": 12,
+    "question": "Ordena una historia y la relata.",
+    "condition": "Muéstrele un patrón de secuencias y pídale ordenarlo y contar la historia.",
+    "criteria": "Puntúe si ordena y relata coherentemente la secuencia."
+  }
+]

@@ -16,8 +16,6 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false , title:'Inicio'}} />
-        <Stack.Screen name="userCreation" options={{title: 'Registro de Usuario' }} />
-        <Stack.Screen name="newEvaluation" options={{title: 'Iniciar Evaluacion' }} />
         <Stack.Screen name="(session)" options={{ headerShown: false , title:'Evaluacion'}} />
 
       </Stack>

@@ -1,4 +1,5 @@
-import { SelectedUserProvider } from "@/scripts/selectedUserContext";
+// app/(session)/_layout.tsx
+import { SelectedUserProvider } from "@/components/selectedUserContext";
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
@@ -14,8 +15,10 @@ export default function UserContextLayout() {
     <SelectedUserProvider>
         <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Stack>
-            <Stack.Screen name="evaluationDashboard" options={{ headerShown: false , title:'Userpage'}} />
-            <Stack.Screen name="applyEvaluation" options={{ title: 'Evaluation' }} />
+            <Stack.Screen name="userCreation" options={{ headerShown: true , title:'Creacion de Usuario'}} /> 
+            <Stack.Screen name="userSelection" options={{ headerShown: true , title:'Seleccion de Usuario'}} />  
+            <Stack.Screen name="evaluationDashboard" options={{ headerShown: true , title:'Evaluacion'}} />
+            <Stack.Screen name="evaluationApply" options={{ headerShown: true , title:'Preguntas'}} />               
 
         </Stack>
         <StatusBar style="auto" />

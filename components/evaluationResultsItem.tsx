@@ -62,7 +62,7 @@ export default function ResultItem({
     } as const;
 
     const { bg: backgroundColor, border: Color, text: textDetails, icon: iconName } = colorMap[result];
-    const [expanded, setExpanded] = useState(false);
+    const [expanded, setExpanded] = useState(true);
 
     return (
         <Pressable onPress={() => setExpanded(!expanded)} style={[styles.button, { backgroundColor: backgroundColor, borderColor: Color }]}>
@@ -87,8 +87,10 @@ export default function ResultItem({
                                 : <Ionicons name='close-circle-outline' size={16} color={red} />}
                     </ThemedText>
                 ))}
-                <ThemedText style={styles.status}>Puntuación </ThemedText>
-                <ThemedText>(PD = {pd}) (PT = {pt})</ThemedText>
+                <ThemedText style={styles.status}>Puntaje </ThemedText>
+                <ThemedText style={[styles.textDetails, {fontWeight: '400'}]}>Puntuacion Directa: <ThemedText style={[styles.textDetails, {fontWeight: '300'}]}>{pd} </ThemedText></ThemedText>
+                <ThemedText style={[styles.textDetails, {fontWeight: '400'}]}>Puntuacion Tipica: <ThemedText style={[styles.textDetails, {fontWeight: '300'}]}>{pt} </ThemedText></ThemedText>
+                
                 
             </View>
             )}
@@ -102,7 +104,9 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         borderWidth: 1,
         marginVertical: 10,
-        flexDirection: 'column',  
+        flexDirection: 'column', 
+        flexShrink: 1,
+        flexWrap: "wrap", 
     },
     content: {
         flexDirection: "row",
@@ -111,18 +115,21 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginHorizontal: 10,
         marginVertical: 10,
+
     },
     score: {
         flexDirection: 'row',
         gap: 10,
     },
     textContainer: {
-        
+        flexShrink: 1,
         flexDirection: "column",
     },
     textDetails: {
         fontSize: 15,
         lineHeight: 18,
+        flexShrink: 1,
+        flexWrap: "wrap",
     },
     title: {
         fontSize: 20,

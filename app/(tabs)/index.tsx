@@ -8,10 +8,10 @@ import { StyleSheet } from 'react-native';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#ceaecbff', dark: '#924575ff' }}
+      headerBackgroundColor={{ light: '#edeaeaff', dark: '#5e5e5e2b' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
+          source={require('@/assets/images/smile-wave-owl.png')}
           style={styles.reactLogo}
         />
       }>
@@ -60,10 +60,10 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   reactLogo: {
-    height: 178,
-    width: 290,
+    height: 140,
+    width: 200,
     bottom: 0,
-    left: 0,
+    left: '25%',
     position: 'absolute',
   },
 

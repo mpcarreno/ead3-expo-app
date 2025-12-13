@@ -1,3 +1,4 @@
+//components/dropdownSearch.tsx
 import { ThemedText } from "@/components/themed-text";
 import { ThemedTextInput } from "@/components/themed-textinput";
 import { ThemedView } from "@/components/themed-view";
@@ -15,6 +16,7 @@ export type DropdownSearchProps = TextInputProps & {
   onSelect: (item: string) => void;    // Selección
   noResultsText?: string;              // Texto "No existe"
   onCreateNew?: () => void;            // Botón crear nuevo
+  showList?: boolean;
 };
 
 export default function DropdownSearch({
@@ -28,6 +30,7 @@ export default function DropdownSearch({
   onSelect,
   noResultsText = "*Sin Resultados*",
   onCreateNew,
+  showList = true,
   ...rest
 }: DropdownSearchProps) {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -54,7 +57,7 @@ export default function DropdownSearch({
       />
 
       {/* DROPDOWN */}
-      {showDropdown && (
+      {showDropdown && showList && (
         <ThemedView style={[{borderColor: boxBorderColor }, styles.dropdownContainer]}>
           <FlatList
             data={filtered.length > 0 ? filtered : ["__NO_RESULTS__"]}

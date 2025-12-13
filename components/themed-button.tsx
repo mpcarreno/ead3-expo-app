@@ -26,7 +26,7 @@ export default function Button({
   onPress,
   width = '100%' as DimensionValue,
   height = 60 as DimensionValue,
-  backgroundColor = '#2094beff',
+  backgroundColor = '#2596B5',
   textColor = '#ffffffff',
   fontSize = 18,
   borderRadius = 10,
@@ -57,7 +57,7 @@ export default function Button({
             borderRadius,
             flexDirection: 'row',
             alignItems: 'center',
-            justifyContent: contentJustify,   // ⬅️ cambia según haya icono o no
+            justifyContent: contentJustify,   
             paddingHorizontal: 12,
           },
           pressed && styles.buttonPressed,

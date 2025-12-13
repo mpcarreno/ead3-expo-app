@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginVertical: 10,
+        marginVertical: 5,
         overflow: "hidden",
   },
     textContainer: {

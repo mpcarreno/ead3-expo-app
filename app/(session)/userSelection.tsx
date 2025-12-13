@@ -1,13 +1,15 @@
-// newEvaluation.tsx
+// userSelection.tsx
 import DropdownSearch from "@/components/dropdownSearch";
 import SelectableCard from "@/components/selectableCard";
 import { useSelectedUser } from "@/components/selectedUserContext";
+import Button from "@/components/themed-button";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
+import { getShortDate } from "@/utils/date";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useRouter } from "expo-router"; // si usas expo-router
+import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
-import { KeyboardAvoidingView, Platform, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { KeyboardAvoidingView, Platform, StyleSheet, View } from "react-native";
 
 
 export default function newEvaluation() {
@@ -16,21 +18,31 @@ export default function newEvaluation() {
   const [selectedId, setSelectedId] = useState<any>(null);
   const [storedUids, setStoredUids] = useState<string[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
+  
   const [cardSelected, setCardSelected] = useState(false);
+  
+  const [existingReport, setExistingReport] = useState(false);
 
-  // dentro del componente:
+  
   const { setCurrentUser } = useSelectedUser();
   const router = useRouter();
+  
 
   useEffect(() => { loadUsers(); }, []);
 
-  // 🔹 Cargar IDs desde AsyncStorage
+  
   const loadUsers = async () => {
     const stored = await AsyncStorage.getItem("user_ids");
     setStoredUids(stored ? JSON.parse(stored) : []);
   };
 
-  // 🔹 Buscar y filtrar IDs
+  const verifyExistingReport = async (uid: string) => {
+  const evalDate = getShortDate();
+  const report = await AsyncStorage.getItem(`results_${uid}_${evalDate}`);
+
+  setExistingReport(!!report); 
+};
+  
   const handleSearch = (text: string) => {
     setSearchId(text);
 
@@ -45,12 +57,29 @@ export default function newEvaluation() {
     setShowDropdown(true);
   };
 
-  // 🔹 Seleccionar usuario
+  const deleteReport = async (uid: string) => {
+    try {
+      const evalDate = getShortDate();
+      const report = `results_${uid}_${evalDate}`;
+      const evaluation = `evaluations_${uid}_${evalDate}`;
+
+      await AsyncStorage.removeItem(report);
+      await AsyncStorage.removeItem(evaluation);
+
+      console.log("Reporte eliminado:", report);
+      console.log("Evaluacion Eliminada", evaluation)
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
   const selectUser = async (uid: string) => {
     setSearchId(uid);
     setListResults([]);
     setShowDropdown(false);
     setCardSelected(false);
+    setExistingReport(false);
 
     const data = await AsyncStorage.getItem(`user_${uid}`);
     setSelectedId(data ? JSON.parse(data) : null);
@@ -86,8 +115,10 @@ export default function newEvaluation() {
           {selectedId && (
               <SelectableCard
                 selected={cardSelected}
-                onPress={() => setCardSelected(!cardSelected)}
-              >
+                onPress={() => {
+                  setCardSelected(!cardSelected);
+                  verifyExistingReport(selectedId.uid);
+                }}>
                   <ThemedText style={styles.label}>
                     {selectedId.name} {selectedId.lastName}
                   </ThemedText>
@@ -113,19 +144,40 @@ export default function newEvaluation() {
                 </View>
                 
               </SelectableCard>
+
+              
             )}
 
-
-          {cardSelected && (
-            <TouchableOpacity
+          {cardSelected && !existingReport && (
+              <Button
               style={styles.continueButton}
-              onPress={() => {
-                setCurrentUser(selectedId);   // 🔥 Guardar usuario global
-                router.push("/(session)/evaluationDashboard");     // ir a pagina del usuario
-              }}
-            >
-              <Text style={styles.continueText}>Continuar</Text>
-            </TouchableOpacity>
+              label= "Continuar"
+              onPress={async () => {
+                await deleteReport(selectedId.uid)
+                setCurrentUser(selectedId);
+                
+                router.replace("/(session)/evaluationDashboard");    
+              }}>
+            </Button>
+            
+          )}
+
+          {cardSelected && existingReport && (
+            <View>
+              <ThemedText style={styles.warningText}>El usuario seleccionado ya tiene un reporte generado el mismo dia, si presiona continuar el reporte sera eliminado</ThemedText>
+
+              <Button
+              style={styles.continueButton}
+              label= "Continuar"
+              onPress={async () => {
+                await deleteReport(selectedId.uid)
+                setCurrentUser(selectedId);
+                
+                router.replace("/(session)/evaluationDashboard");    
+              }}>
+            </Button>
+            </View>
+            
           )}
 
 
@@ -167,17 +219,15 @@ export const styles = StyleSheet.create({
   },
 
   continueButton: {
-    backgroundColor: "#007aff",
-    padding:20,
-    borderRadius: 10,
-    alignItems: "center",
+
     marginTop: 20,
   },
 
-  continueText: {
-    color: "white",
+  warningText: {
+    color: 'red',
     fontSize: 16,
     fontWeight: "bold",
+    textAlign: 'center'
   },
 
   dropdownContainer: {

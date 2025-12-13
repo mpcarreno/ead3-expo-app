@@ -5,14 +5,14 @@
 
 import { Platform } from 'react-native';
 
-const tintColorLight = '#229ef0ff';
-const tintColorDark = '#13699eff';
+const tintColorLight = '#2596B5';
+const tintColorDark = '#005377';
 
 export const Colors = {
   light: {
     text: '#4e4e4eff',
     background: '#fff',
-    selectionBackground: '#e7f1feff',
+    selectionBackground: '#58aecd26',
     boxBackground: '#f4f4f4ff',
     greenBackground: '#e0ecdcff',
     green: '#42c830ff',

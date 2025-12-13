@@ -80,7 +80,7 @@ export default function ApplyEvaluation() {
 
   const finishEvaluation = async () => {
     await saveEvaluation(uid, area, answers);
-    router.push({
+    router.replace({
       pathname: "/(session)/evaluationDashboard",
       params: { updated: "true", uid },
     });

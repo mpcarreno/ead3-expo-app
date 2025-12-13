@@ -5,7 +5,8 @@ import { useSelectedUser } from "@/components/selectedUserContext";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
 import { getShortDate } from "@/utils/date";
-import { createEmptyEvaluations, createEmptyResults, EvaluationAreas, EvaluationResults, loadEvaluations, loadResults } from "@/utils/evaluationResults";
+import { createEmptyResults, EvaluationResults, loadResults } from "@/utils/evaluationResults";
+import { useLocalSearchParams } from "expo-router";
 import React, { useEffect, useMemo, useState } from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 
@@ -17,94 +18,114 @@ const evaluationAreas = [
   { key: "PS", title: "Personal Social" },
 ] as const;
 
-export default function EvaluationDashboard() {
+export default function EvaluationReport() {
   const emptyResults = useMemo(() => createEmptyResults(), []);
-  const emptyEvals = useMemo(() => createEmptyEvaluations(), []);
-
   const [results, setResults] = useState<EvaluationResults>(emptyResults);
-  const [evals, setEvals] = useState<EvaluationAreas>(emptyEvals);
-    const { currentUser } = useSelectedUser();
-    const evalDate = getShortDate();
-    
-
-    useEffect(() => {
-      if (!currentUser) return;
   
-      const fetchData = async () => {
-        const evaluationResults = await loadResults(currentUser.uid, evalDate)
-        const evaluations = await loadEvaluations(currentUser.uid, evalDate)
-        setResults(evaluationResults);
-        setEvals(evaluations);
-        console.log(evaluations)
+  const { currentUser } = useSelectedUser();
+  const evalDate = getShortDate();
 
-      };
-  
-      fetchData();
-    }, [currentUser, evalDate]);
+  const params = useLocalSearchParams();
+  const paramResults = params.data ? JSON.parse(params.data as string) : null;
 
+  useEffect(() => {
+  // Si vienen datos por params, úsalos y no intentes cargar nada
+  if (paramResults) {
+    setResults(paramResults);
+    return;
+  }
+
+  // Si no hay currentUser (todavía), no hacemos nada
+  if (!currentUser) return;
+
+  let mounted = true;
+
+  const fetchData = async () => {
+    try {
+      const evaluationResults = await loadResults(currentUser.uid, evalDate);
+      if (!mounted) return;
+      setResults(evaluationResults);
+    } catch (err) {
+      console.error("Error cargando resultados:", err);
+    }
+  };
+
+  fetchData();
+
+  return () => {
+    mounted = false;
+  };
+}, [currentUser, evalDate, paramResults]);
+
+  if (!results || !results.userinfo) {
     return (
+      <ThemedView style={styles.center}>
+        <ThemedText>Cargando...</ThemedText>
+      </ThemedView>
+    );
+  }
+  console.log("REPORTE RECIBIDO:", results);
+  return (
     <ThemedView style={{ flex: 1 }}>
       <ScrollView style={{ flex: 1 }}>
-        <ThemedView style={styles.container}>
-        
-                    {/* Información del paciente */}
-                    <SelectableCard 
-                      noAction={true}
-                      colors="simple">
-                    <ThemedText style={styles.label}>Datos del Paciente</ThemedText>
-        
-                    <View style={styles.cardInformation}>
+          <ThemedView style={styles.container}>
+          
+            {/* Información del paciente */}
+            <SelectableCard 
+              noAction={true}
+              colors="simple">
+            <ThemedText style={styles.label}>Datos del Paciente</ThemedText>
 
-                      <View style={styles.row}>
-                        <ThemedText style={styles.textItem}>Nombre </ThemedText>
-                        <ThemedText style={styles.value}>{currentUser.name} {currentUser.lastName}</ThemedText>
-                      </View>
+            <View style={styles.cardInformation}>
 
-                      <View style={styles.row}>
-                        <ThemedText style={styles.textItem}>ID  </ThemedText>
-                        <ThemedText style={styles.value}>{currentUser.uidType}: {currentUser.uid}</ThemedText>
-                      </View>
+              <View style={styles.row}>
+                <ThemedText style={styles.textItem}>Nombre </ThemedText>
+                <ThemedText style={styles.value}>{results?.userinfo?.name  ?? ""} {results?.userinfo?.lastName  ?? ""}</ThemedText>
+              </View>
 
-                      <View style={styles.row}>
-                        <ThemedText style={styles.textItem}>FN </ThemedText>
-                        <ThemedText style={styles.value}>{currentUser.dob.day}-{currentUser.dob.month}-{currentUser.dob.year}</ThemedText>
-                      </View>
+              <View style={styles.row}>
+                <ThemedText style={styles.textItem}>ID  </ThemedText>
+                <ThemedText style={styles.value}>{results?.userinfo?.uidType  ?? ""}: {results?.userinfo?.uid  ?? ""}</ThemedText>
+              </View>
 
-                      <View style={styles.row}>
-                        <ThemedText style={styles.textItem}>FE </ThemedText>
-                        <ThemedText style={styles.value}>{results.date}</ThemedText>
-                      </View>
+              <View style={styles.row}>
+                <ThemedText style={styles.textItem}>FN </ThemedText>
+                <ThemedText style={styles.value}>{results?.userinfo?.dob.day  ?? ""}-{results?.userinfo?.dob.month  ?? ""}-{results?.userinfo?.dob.year  ?? ""}</ThemedText>
+              </View>
 
-                      <View style={styles.row}>
-                        <ThemedText style={styles.textItem}>Edad{" "}</ThemedText>
-                        <ThemedText style={styles.value}>{results.age.ageMonths} Meses {results.age.ageDays} Días</ThemedText>
-                      </View>
+              <View style={styles.row}>
+                <ThemedText style={styles.textItem}>FE </ThemedText>
+                <ThemedText style={styles.value}>{results?.date  ?? ""}</ThemedText>
+              </View>
 
-                      <View style={{flexDirection: "row"}}>
-                        <ThemedText style={styles.textItem}>Rango </ThemedText>
-                        <ThemedText style={styles.value}>{results.age.range}</ThemedText>
-                      </View>
-                    </View>
-                    
-                    <ThemedText style={styles.label}>Resultados</ThemedText>
+              <View style={styles.row}>
+                <ThemedText style={styles.textItem}>Edad{" "}</ThemedText>
+                <ThemedText style={styles.value}>{results?.age?.ageMonths  ?? ""} Meses {results?.age?.ageDays  ?? ""} Días</ThemedText>
+              </View>
 
-                    {evaluationAreas.map(({ key, title }) => (
-                      <ResultItem 
-                        key={key}
-                        title={title}
-                        result={results[key].level}
-                        pd={results[key].pd}
-                        pt={results[key].pt}
-                        answers={evals[key].answers}
-                      />
-                    ))}
-                    </SelectableCard>
+              <View style={{flexDirection: "row"}}>
+                <ThemedText style={styles.textItem}>Rango </ThemedText>
+                <ThemedText style={styles.value}>{results?.age?.range  ?? ""}</ThemedText>
+              </View>
+            </View>
+            
+            <ThemedText style={styles.label}>Resultados</ThemedText>
 
-                    
-        </ThemedView>
+            {evaluationAreas.map(({ key, title }) => (
+              <ResultItem 
+                key={key} 
+                title={title}
+                result={results[key].level}
+                pd={results[key].pd}
+                pt={results[key].pt}
+                answers={results[key].answers}
+              />
+            ))}
+            </SelectableCard>     
+          </ThemedView>
       </ScrollView>
     </ThemedView>
-    );
+  );
 }
 
 // ---------------- STYLES ----------------
@@ -112,10 +133,6 @@ const styles = StyleSheet.create({
   container: { 
     flex: 1, 
     padding: 20, 
-    shadowColor: "#515151ff",
-    shadowOffset: { width: 0, height: 3 },
-    shadowOpacity: 0.25,
-    shadowRadius: 12,  
   },
   row: {
   flexDirection: "row",

@@ -2,6 +2,7 @@
 import EvaluationButton from "@/components/evaluationButton";
 import SelectableCard from "@/components/selectableCard";
 import { useSelectedUser } from "@/components/selectedUserContext";
+import Button from "@/components/themed-button";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
 import { calculateAgeRange } from "@/utils/calculate-userdata";
@@ -10,7 +11,7 @@ import { EvaluationAreas, createEmptyEvaluations, getResults, loadEvaluations, s
 import { useRouter } from "expo-router";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 
 // Config de botones para evitar repetir código
@@ -34,15 +35,22 @@ export default function EvaluationDashboard() {
 
   // Cargar evaluaciones desde AsyncStorage
   useEffect(() => {
-    if (!currentUser) return;
+  if (!currentUser) return;
 
-    const fetchData = async () => {
-      const result = await loadEvaluations(currentUser.uid, evalDate);
+  const fetchData = async () => {
+    const result = await loadEvaluations(currentUser.uid, evalDate);
+
+    if (result) {
+      // Sí hay algo guardado
       setEvals(result);
-    };
+    } else {
+      // No hay eval → cargar vacía
+      setEvals(createEmptyEvaluations());
+    }
+  };
 
-    fetchData();
-  }, [currentUser, evalDate]);
+  fetchData();
+}, [currentUser, evalDate]);
 
 
   if (!currentUser || !CurrentAge.validUser) {
@@ -58,7 +66,7 @@ export default function EvaluationDashboard() {
 
   const goToEvaluation = useCallback(
     (area: string) => {
-      router.push({
+      router.replace({
         pathname: "/(session)/evaluationApply",
         params: {
           evaluationArea: area,
@@ -123,7 +131,8 @@ export default function EvaluationDashboard() {
 
           {/* Botón de reporte */}
           {allDone && (
-            <TouchableOpacity
+            <Button
+              label="Generar Reporte"
               style={styles.reportButton}
               onPress={async () => {
                 try {
@@ -134,15 +143,14 @@ export default function EvaluationDashboard() {
 
                   console.log("RESULTADOS:", results);
 
-                  router.push("/evaluationReport")
+                  router.replace("/evaluationReport")
 
                 } catch (err) {
                   console.error("Error generando el reporte:", err);
                 }
               }}
             >
-              <Text style={styles.reportText}>Generar Reporte</Text>
-            </TouchableOpacity>
+            </Button>
           )}
         </ThemedView>
       </ScrollView>
@@ -177,9 +185,7 @@ const styles = StyleSheet.create({
   },
 
   reportButton: {
-    backgroundColor: "#007aff",
-    padding: 16,
-    borderRadius: 12,
+
     marginTop: 30,
   },
 

@@ -4,11 +4,12 @@ import levelGraph from "@/assets/data/levelGraph.json";
 import { getShortDate } from "@/utils/date";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-// 🔹 Tipos para evaluación
+
 export type ResultsItem = {
-  pd: number; // # before PI + # correct answers
+  pd: number; 
   pt: number;
   level: 'Satisfactorio' | 'Riesgo de Problema' | 'Sospecha de Problema' ;
+  answers: { questionId: number; question: string; answer: boolean }[];
 };
 
 export type EvaluationResults = {
@@ -35,19 +36,19 @@ export type EvaluationAreas = {
   PS: EvaluationItem;
 };
 
-// 🔹 Crear evaluaciones vacías
+// initializing the type for Results
 export const createEmptyResults = (): EvaluationResults => ({
   userinfo: { name: "", lastName: "", uid: "", uidType: "", dob: { day: 0, month: 0, year: 0 }},
-  age: { ageMonths: 0, ageDays: 0, validUser: true, range: 1 },  // 👈 estructura mínima válida
+  age: { ageMonths: 0, ageDays: 0, validUser: true, range: 1 }, 
   date: "",
-  MG: { pd: 0, pt: 0, level: 'Sospecha de Problema' },
-  MF: { pd: 0, pt: 0, level: 'Sospecha de Problema' },
-  AL: { pd: 0, pt: 0, level: 'Sospecha de Problema' },
-  PS: { pd: 0, pt: 0, level: 'Sospecha de Problema' },
+  MG: { pd: 0, pt: 0, level: 'Sospecha de Problema', answers: [] },
+  MF: { pd: 0, pt: 0, level: 'Sospecha de Problema', answers: [] },
+  AL: { pd: 0, pt: 0, level: 'Sospecha de Problema', answers: [] },
+  PS: { pd: 0, pt: 0, level: 'Sospecha de Problema', answers: [] },
 });
 
 
-// Crea estructura limpia
+// initializing the type for Evaluations
 export const createEmptyEvaluations = (): EvaluationAreas => ({
   MG: { completed: false, date: null, answers: [] },
   MF: { completed: false, date: null, answers: [] },
@@ -56,13 +57,13 @@ export const createEmptyEvaluations = (): EvaluationAreas => ({
 });
 
 
-// 🔹 Cargar preguntas desde QuestionBanks
+// load questions from banks
 export const load = (QuestionBanks: any, area: string) => {
   return QuestionBanks[area] || [];
 };
 
 
-// 🔹 Guardar evaluación en AsyncStorage
+//  save the results object in async storage
 export const saveResults = async (
   uid: string,
   evalResults: EvaluationResults,
@@ -73,7 +74,7 @@ export const saveResults = async (
   await AsyncStorage.setItem(key, JSON.stringify(evalResults));
 };
 
-// 🔹 Cargar resultados desde AsyncStorage
+// load the results object from async
 export const loadResults = async (
   uid: string,
   date: string
@@ -104,7 +105,7 @@ export const loadResults = async (
 
 
 
-// Cargar EVALUACIONES desde AsyncStorage
+// load evaluations
 export const loadEvaluations = async (
   uid: string,
   date: string
@@ -128,7 +129,7 @@ export const loadEvaluations = async (
 
 
 
-// Get PD
+// Calculate results (PD, PT and level) based on the answers
 export const getResults = (
   evaluation: EvaluationAreas,
   userinfo: any,
@@ -171,7 +172,8 @@ export const getResults = (
         PTMG,
         levelGraph.MG[rangeIndex].min,
         levelGraph.MG[rangeIndex].max
-      )
+      ),
+      answers: evaluation.MG.answers
     },
     MF: {
       pd: PDMF,
@@ -180,7 +182,8 @@ export const getResults = (
         PTMF,
         levelGraph.MF[rangeIndex].min,
         levelGraph.MF[rangeIndex].max
-      )
+      ),
+      answers: evaluation.MF.answers
     },
     AL: {
       pd: PDAL,
@@ -189,7 +192,8 @@ export const getResults = (
         PTAL,
         levelGraph.AL[rangeIndex].min,
         levelGraph.AL[rangeIndex].max
-      )
+      ),
+      answers: evaluation.AL.answers
     },
     PS: {
       pd: PDPS,
@@ -198,7 +202,8 @@ export const getResults = (
         PTPS,
         levelGraph.PS[rangeIndex].min,
         levelGraph.PS[rangeIndex].max
-      )
+      ),
+      answers: evaluation.PS.answers
     }
   };
 };

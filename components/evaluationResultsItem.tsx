@@ -80,11 +80,15 @@ export default function ResultItem({
             <View style={styles.extraContent}>
                 
                 <ThemedText style={styles.status}>Items aplicados</ThemedText>
-                {answers.map((item) => (
-                    <ThemedText style={styles.textDetails} key={item.questionId}>
-                    {item.questionId}. {item.question}{" "}
-                    {item.answer ? <Ionicons name='checkmark-circle-outline' size={16} color={green} />
-                                : <Ionicons name='close-circle-outline' size={16} color={red} />}
+                {answers.map((item, index) => (
+                    <ThemedText 
+                        style={styles.textDetails} 
+                        key={`${item.questionId}-${index}`} 
+                    >
+                        {item.questionId}. {item.question}{" "}
+                        {item.answer 
+                            ? <Ionicons name='checkmark-circle-outline' size={16} color={green} />
+                            : <Ionicons name='close-circle-outline' size={16} color={red} />}
                     </ThemedText>
                 ))}
                 <ThemedText style={styles.status}>Puntaje </ThemedText>

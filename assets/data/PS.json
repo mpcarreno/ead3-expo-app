@@ -1,0 +1,254 @@
+[
+  {
+    "questionId": 1,
+    "range": 1,
+    "question": "Se tranquiliza cuando se toma entre los brazos.",
+    "condition": "Observe si durante la prueba el bebé se calma cuando se le alza (bien sea por el examinador o el cuidador).",
+    "criteria": "Puntúe si el bebé se calma al ser alzado."
+  },
+  {
+    "questionId": 2,
+    "range": 1,
+    "question": "Responde a las caricias.",
+    "condition": "Pídale al cuidador que acaricie al bebé y observe la reacción que tiene.",
+    "criteria": "Puntúe si el bebé reacciona a las caricias sin que la respuesta sea un reflejo (moro, succión, palmar). Pueden ser movimientos de extremidades."
+  },
+  {
+    "questionId": 3,
+    "range": 1,
+    "question": "El bebé ya está registrado.",
+    "condition": "Pregúntele al cuidador si el bebé ya está registrado con su nombre.",
+    "criteria": "Puntúe si el bebé ya cuenta con Registro Civil."
+  },
+  {
+    "questionId": 4,
+    "range": 2,
+    "question": "Reconoce la voz del cuidador principal.",
+    "condition": "Coloque al bebé boca arriba sobre la camilla. Ubíquese fuera del alcance visual del bebé y pida al cuidador que hable en voz alta desde el lado contrario. Observe la reacción.",
+    "criteria": "Puntúe si el bebé voltea la cabeza o trata de ubicar el sitio de donde proviene la voz del cuidador."
+  },
+  {
+    "questionId": 5,
+    "range": 2,
+    "question": "Sonrisa social.",
+    "condition": "Solicite al cuidador que tome en brazos al niño y lo acaricie suavemente, haga mimos o juegue con él.",
+    "criteria": "Puntúe si el bebé mira fijamente al cuidador y sonríe cuando lo acaricia."
+  },
+  {
+    "questionId": 6,
+    "range": 2,
+    "question": "Responde a una conversación.",
+    "condition": "Pídale al cuidador que hable y juegue con el bebé; observe su reacción.",
+    "criteria": "Puntúe si el bebé intenta comunicarse con sonidos (vocaliza, sonríe, balbucea)."
+  },
+  {
+    "questionId": 7,
+    "range": 3,
+    "question": "Coge las manos del examinador.",
+    "condition": "Coloque al bebé boca arriba o en el regazo. Acercar las manos del examinador a las del bebé sin tocarlas.",
+    "criteria": "Puntúe si el bebé coge las manos del examinador momentáneamente."
+  },
+  {
+    "questionId": 8,
+    "range": 3,
+    "question": "Ríe a carcajadas.",
+    "condition": "Coloque al bebé boca arriba. Pídale al cuidador que juegue con él.",
+    "criteria": "Puntúe si el bebé ríe a carcajadas al menos una vez."
+  },
+  {
+    "questionId": 9,
+    "range": 3,
+    "question": "Busca la continuación del juego.",
+    "condition": "Inicie juego con el bebé. Luego pida al cuidador que detenga el juego congelando movimientos.",
+    "criteria": "Puntúe si el bebé busca nuevamente la interacción realizando movimientos o sonidos."
+  },
+  {
+    "questionId": 10,
+    "range": 4,
+    "question": "Reacciona con desconfianza ante el extraño(a).",
+    "condition": "Observe si el bebé reacciona con desconfianza ante usted o un extraño.",
+    "criteria": "Puntúe si el bebé no permite la interacción, la rechaza o llora."
+  },
+  {
+    "questionId": 11,
+    "range": 4,
+    "question": "Busca apoyo del cuidador.",
+    "condition": "Observe si el bebé espontáneamente busca apoyo. Si no, pregunte al cuidador si ocurre.",
+    "criteria": "Puntúe si el bebé acude a un adulto conocido cuando tiene miedo, se cae o se pega."
+  },
+  {
+    "questionId": 12,
+    "range": 4,
+    "question": "Reacciona a su imagen en el espejo.",
+    "condition": "Coloque al bebé frente a un espejo y observe su reacción.",
+    "criteria": "Puntúe si mira fijamente la imagen, la toca, da palmadas o sonríe."
+  },
+  {
+    "questionId": 13,
+    "range": 5,
+    "question": "Participa en juegos.",
+    "condition": "Coloque al bebé sentado y observe si juega con la pelota, manda besos, hace palmas, etc.",
+    "criteria": "Puntúe si participa en juegos realizando acciones descritas."
+  },
+  {
+    "questionId": 14,
+    "range": 5,
+    "question": "Muestra interés o intención en alimentarse solo.",
+    "condition": "Pregunte al cuidador cómo reacciona el bebé ante la comida.",
+    "criteria": "Puntúe si el bebé muestra intención de alimentarse (llevar comida a la boca, usar cuchara, etc.)."
+  },
+  {
+    "questionId": 15,
+    "range": 5,
+    "question": "Explora el entorno.",
+    "condition": "Pídale al cuidador que deje al bebé en el piso y observe.",
+    "criteria": "Puntúe si el bebé se aleja explorando y vuelve a su cuidador."
+  },
+  {
+    "questionId": 16,
+    "range": 6,
+    "question": "Seguimiento de rutinas.",
+    "condition": "Pregúntele al cuidador qué rutinas hace el niño a diario.",
+    "criteria": "Puntúe si logran describir al menos una rutina diaria con momento y actividad."
+  },
+  {
+    "questionId": 17,
+    "range": 6,
+    "question": "Ayuda a desvestirse.",
+    "condition": "Pregunte si el niño ayuda a desvestirse quitándose prendas.",
+    "criteria": "Puntúe si se quita al menos dos prendas correctamente."
+  },
+  {
+    "questionId": 18,
+    "range": 6,
+    "question": "Señala 5 partes de su cuerpo.",
+    "condition": "Pídale mostrar ojos, nariz, boca, piernas, barriga, orejas, pies.",
+    "criteria": "Puntúe si señala al menos 5 partes correctamente."
+  },
+  {
+    "questionId": 19,
+    "range": 7,
+    "question": "Acepta y tolera el contacto de su piel con diferentes texturas.",
+    "condition": "Coloque piezas de texturas sobre brazos y palmas.",
+    "criteria": "Puntúe si tolera el contacto sin mostrar disgusto intenso."
+  },
+  {
+    "questionId": 20,
+    "range": 7,
+    "question": "Expresa su satisfacción cuando logra o consigue algo.",
+    "condition": "Pídale hacer un dibujo o actividad.",
+    "criteria": "Puntúe si se sorprende o disfruta su logro (aplaude, sonríe, se sonroja)."
+  },
+  {
+    "questionId": 21,
+    "range": 7,
+    "question": "Identifica emociones básicas en una imagen.",
+    "condition": "Muéstrele imágenes de alegría, tristeza, miedo y rabia.",
+    "criteria": "Puntúe si identifica al menos 3 de las 4 emociones."
+  },
+  {
+    "questionId": 22,
+    "range": 8,
+    "question": "Identifica qué es de él y qué es de otros.",
+    "condition": "Señale objetos propios y ajenos preguntando a quién pertenecen.",
+    "criteria": "Puntúe si distingue correctamente lo propio y lo ajeno."
+  },
+  {
+    "questionId": 23,
+    "range": 8,
+    "question": "Dice nombres de las personas con quienes vive o comparte.",
+    "condition": "Pregúntele quién cuida, con quién vive, nombres de amigos, etc.",
+    "criteria": "Puntúe si nombra personas correctas."
+  },
+  {
+    "questionId": 24,
+    "range": 8,
+    "question": "Expresa verbalmente emociones básicas.",
+    "condition": "Pregunte por situaciones donde pueda sentir alegría, tristeza, rabia o miedo.",
+    "criteria": "Puntúe si identifica verbalmente al menos 3 de las 4 emociones."
+  },
+  {
+    "questionId": 25,
+    "range": 9,
+    "question": "Rechaza la ayuda del cuidador cuando desea hacer algo por sí mismo.",
+    "condition": "Observe si intenta vestirse, comer o realizar tareas solo.",
+    "criteria": "Puntúe si expresa deseos de autonomía rechazando ayuda."
+  },
+  {
+    "questionId": 26,
+    "range": 9,
+    "question": "Comparte juego con otros niños(as).",
+    "condition": "Pregunte si juega con otros niños, hermanos o amigos.",
+    "criteria": "Puntúe si interactúa y comparte actividades independientemente de que pele o no."
+  },
+  {
+    "questionId": 27,
+    "range": 9,
+    "question": "Reconoce las emociones básicas en los otros(as).",
+    "condition": "Pregunte al cuidador si identifica cuando otros están felices, tristes, etc.",
+    "criteria": "Puntúe si reconoce emociones en otras personas."
+  },
+  {
+    "questionId": 28,
+    "range": 10,
+    "question": "Puede desvestirse y vestirse solo(a).",
+    "condition": "Observe si logra quitarse y ponerse prendas.",
+    "criteria": "Puntúe si se quita prendas exteriores y puede volver a ponérselas."
+  },
+  {
+    "questionId": 29,
+    "range": 10,
+    "question": "Propone juegos.",
+    "condition": "Pregunte qué quiere jugar.",
+    "criteria": "Puntúe si propone un juego simple con reglas o interacción."
+  },
+  {
+    "questionId": 30,
+    "range": 10,
+    "question": "Sabe cuántos años tiene.",
+    "condition": "Pregunte cuántos años tiene.",
+    "criteria": "Puntúe si responde verbalmente su edad."
+  },
+  {
+    "questionId": 31,
+    "range": 11,
+    "question": "Participa en juegos respetando reglas y turnos.",
+    "condition": "Juegue con el niño a actividades que incluyan turnos.",
+    "criteria": "Puntúe si respeta reglas, turnos y reconoce errores."
+  },
+  {
+    "questionId": 32,
+    "range": 11,
+    "question": "Comenta vida familiar.",
+    "condition": "Pídale que hable de su familia, actividades o experiencias.",
+    "criteria": "Puntúe si describe de forma amplia aspectos familiares o vivencias."
+  },
+  {
+    "questionId": 33,
+    "range": 11,
+    "question": "Colabora por iniciativa propia con actividades cotidianas.",
+    "condition": "Pregunte si realiza mandados o tareas sin que se lo pidan.",
+    "criteria": "Puntúe si realiza acciones por iniciativa propia."
+  },
+  {
+    "questionId": 34,
+    "range": 12,
+    "question": "Manifiesta emoción ante acontecimientos importantes de su grupo social.",
+    "condition": "Pregúntele por fiestas familiares, sociales o culturales.",
+    "criteria": "Puntúe si reconoce eventos y expresa interés o emociones relacionadas."
+  },
+  {
+    "questionId": 35,
+    "range": 12,
+    "question": "Reconocimientos de normas o prohibiciones.",
+    "condition": "Lea un relato con normas y pregunte qué piensa sobre la conducta.",
+    "criteria": "Puntúe si distingue conductas correctas/incorrectas."
+  },
+  {
+    "questionId": 36,
+    "range": 12,
+    "question": "Reconoce emociones complejas (culpa, pena, etc.).",
+    "condition": "Lea un relato donde un personaje experimenta emociones complejas.",
+    "criteria": "Puntúe si identifica emociones complejas o si elabora sobre lo que siente el personaje."
+  }
+]

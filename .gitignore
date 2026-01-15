@@ -32,9 +32,24 @@ yarn-error.*
 
 # VS Code
 .vscode
+*.code-workspace
+
+# IDE and Editors
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
 
 # local env files
-.env*.local
+.env.local
+.env.*.local
+.env
+.env.production
 
 # typescript
 *.tsbuildinfo
@@ -44,3 +59,37 @@ app-example
 # generated native folders
 /ios
 /android
+
+# Logs
+logs/
+*.log
+
+# Build outputs
+build/
+dist/
+out/
+
+# Cache
+.cache/
+.eslintcache
+
+# Testing
+coverage/
+.nyc_output/
+
+# Package managers
+yarn.lock
+pnpm-lock.yaml
+.pnpm-debug.log*
+
+# OS
+Thumbs.db
+.trashcan
+
+# React Native / Expo specific
+.gradle/
+local.properties
+GeneratedPluginRegistrant.*
+
+# Security - sensitive files
+secrets/

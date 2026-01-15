@@ -19,29 +19,17 @@ EAD3 App is designed to streamline the assessment of child development for healt
 
 ## Screenshots
 
-### Home Screen
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+  <img src="assets/images/screen_home.jpeg" alt="Home Screen" width="200"/>
+  <img src="assets/images/screen_patientselection.jpeg" alt="Patient Selection" width="200"/>
+  <img src="assets/images/screen_patientcreation.jpeg" alt="Patient Creation" width="200"/>
+</div>
 
-![Home Screen](assets/images/screen_home.jpeg)
-
-### Patient Selection
-
-![Patient Selection](assets/images/screen_patientselection.jpeg)
-
-### Patient Creation
-
-![Patient Creation](assets/images/screen_patientcreation.jpeg)
-
-### Evaluation Dashboard
-
-![Evaluation Dashboard](assets/images/screen_evaldashboard.jpeg)
-
-### Apply Evaluation
-
-![Apply Evaluation](assets/images/screen_applyeval.jpeg)
-
-### Evaluation Report
-
-![Evaluation Report](assets/images/screen_report.jpeg)
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+  <img src="assets/images/screen_evaldashboard.jpeg" alt="Evaluation Dashboard" width="200"/>
+  <img src="assets/images/screen_applyeval.jpeg" alt="Apply Evaluation" width="200"/>
+  <img src="assets/images/screen_report.jpeg" alt="Evaluation Report" width="200"/>
+</div>
 
 ## Technology Stack
 

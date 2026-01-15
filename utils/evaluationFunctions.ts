@@ -2,7 +2,7 @@
 import { getShortDate } from "@/utils/date";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-// 🔹 Tipos para evaluación
+// Types for evaluation
 export type EvaluationItem = {
   completed: boolean;
   date: string | null;
@@ -18,7 +18,7 @@ export type EvaluationAreas = {
 
 
 
-// 🔹 Crear evaluaciones vacías
+// Create empty evaluations
 export const createEmptyEvaluations = (): EvaluationAreas => ({
   MG: { completed: false, date: null, answers: [] },
   MF: { completed: false, date: null, answers: [] },
@@ -26,19 +26,19 @@ export const createEmptyEvaluations = (): EvaluationAreas => ({
   PS: { completed: false, date: null, answers: [] },
 });
 
-// 🔹 Estado de la evaluación
+// Evaluation state
 export type EvaluationState = {
-  decreasing: boolean;
-  increasing: boolean;
-  PI: boolean;
-  PC: boolean;
-  findPI: boolean;
-  findPC: boolean;
-  hadToDecrease: boolean;
-  indexAtDecrease: number;
+  decreasing: boolean; // whether the evaluation index is in decreasing mode
+  increasing: boolean; // whether the evaluation index is in increasing mode
+  PI: boolean; // whether the "Punto de Inicio" has been found
+  PC: boolean; // whether the "Punto de Cierre" has been found
+  findPI: boolean; // whether we are searching for the "Punto de Inicio"
+  findPC: boolean; // whether we are searching for the "Punto de Cierre"
+  hadToDecrease: boolean; // to indicate we had to decrease at some point
+  indexAtDecrease: number; // index at which the decrease happened
 };
 
-// Ordenar answers antes de guardar.
+// Sort answers before saving
 export const sortAnswers = (
   answers: { questionId: number; question: string; answer: boolean }[]
 ) => {
@@ -46,7 +46,7 @@ export const sortAnswers = (
 };
 
 
-// 🔹 Crear estado inicial
+// Create initial state
 export const createInitialEvaluationState = (): EvaluationState => ({
   decreasing: false,
   increasing: false,
@@ -58,15 +58,15 @@ export const createInitialEvaluationState = (): EvaluationState => ({
   indexAtDecrease: 0,
 });
 
-// 🔹 Resetear estado (opcional)
+// Reset state (optional)
 export const resetEvaluationState = (): EvaluationState => createInitialEvaluationState();
 
-// 🔹 Cargar preguntas desde QuestionBanks
+// Load questions from QuestionBanks
 export const loadQuestions = (QuestionBanks: any, area: string) => {
   return QuestionBanks[area] || [];
 };
 
-// 🔹 Agregar respuesta
+// Add answer
 export const addAnswer = (
   prevAnswers: { questionId: number; question: string; answer: boolean }[],
   questionId: number,
@@ -75,7 +75,7 @@ export const addAnswer = (
 ) => [...prevAnswers, { questionId, question, answer }];
 
 
-// 🔹 Guardar evaluación en AsyncStorage
+// Save evaluation in AsyncStorage
 export const saveEvaluation = async (
   uid: string,
   area: keyof EvaluationAreas,
@@ -92,14 +92,14 @@ export const saveEvaluation = async (
   evaluations[area] = {
     completed: true,
     date: evalDate,
-    answers: sortAnswers(answers), // ⬅️ ORDENADO ANTES DE GUARDAR
+    answers: sortAnswers(answers), // SORTED BEFORE SAVING
   };
 
   await AsyncStorage.setItem(key, JSON.stringify(evaluations));
 };
 
 
-// 🔹 Obtener siguiente índice con estado
+// Get next index with state
 export const getNextQuestionIndex = (
   currentIndex: number,
   answers: { questionId: number; question: string; answer: boolean }[],
@@ -115,7 +115,7 @@ export const getNextQuestionIndex = (
   if (state.PI && state.PC) return { nextIndex: 100, state };
 
   if (range > 1) {
-    // Primera pregunta
+    // First question logic
     if (answerCount === 1) {
       if (currentAnswer.answer) {
         state.increasing = true;
@@ -126,7 +126,7 @@ export const getNextQuestionIndex = (
       return { nextIndex: currentIndex - 1, state };
     }
 
-    // Segunda pregunta
+    // Second question logic
     if (answerCount === 2) {
       if (state.increasing) {
         if (currentAnswer.answer) {
@@ -152,7 +152,7 @@ export const getNextQuestionIndex = (
       return { nextIndex: currentIndex - 1, state };
     }
 
-    // findPI activo
+    // If findPI is active
     if (state.findPI) {
       const PreviousAnswer = answers[answers.length - 2];
 
@@ -203,7 +203,7 @@ export const getNextQuestionIndex = (
       return { nextIndex: currentIndex - 1, state };
     }
 
-    // findPC activo
+    // if findPC is active
     if (state.findPC && !state.PC) {
       const PreviousAnswer = answers[answers.length - 2];
 

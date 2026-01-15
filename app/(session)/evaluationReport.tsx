@@ -29,13 +29,13 @@ export default function EvaluationReport() {
   const paramResults = params.data ? JSON.parse(params.data as string) : null;
 
   useEffect(() => {
-  // Si vienen datos por params, úsalos y no intentes cargar nada
+  // If data comes from params
   if (paramResults) {
     setResults(paramResults);
     return;
   }
 
-  // Si no hay currentUser (todavía), no hacemos nada
+  // If there is no currentUser 
   if (!currentUser) return;
 
   let mounted = true;
@@ -70,7 +70,7 @@ export default function EvaluationReport() {
       <ScrollView style={{ flex: 1 }}>
           <ThemedView style={styles.container}>
           
-            {/* Información del paciente */}
+            {/* Patient information */}
             <SelectableCard 
               noAction={true}
               colors="simple">
@@ -128,7 +128,7 @@ export default function EvaluationReport() {
   );
 }
 
-// ---------------- STYLES ----------------
+// Style definitions
 const styles = StyleSheet.create({
   container: { 
     flex: 1, 

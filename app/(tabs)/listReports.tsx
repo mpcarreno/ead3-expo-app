@@ -58,7 +58,7 @@ export default function ListReports() {
       await AsyncStorage.removeItem(report);
       await AsyncStorage.removeItem(evaluation);
 
-      // Actualizar listas en pantalla sin necesidad de recargar todo
+      // Update lists on screen without needing to reload everything
       setResultsFullList(prev => prev.filter(r => r.date !== date || r.userinfo?.uid !== userId));
       setFilteredList(prev => prev.filter(r => r.date !== date || r.userinfo?.uid !== userId));
 
@@ -109,19 +109,19 @@ export default function ListReports() {
           PS: r?.PS ?? { pd:0, pt:0, level:"Satisfactorio", answers: [] },
         })) as EvaluationResults[];
       setResultsFullList(clean);
-      setFilteredList(clean); // 🔹 Mostrar todas inicialmente
+      setFilteredList(clean); // Show all initially
 
     } catch (err) {
       console.error("Error cargando todas las evaluaciones", err);
     }
   };
 
-  // 🔹 Lista para el dropdown (nombre + fecha)
+  // List for dropdown (name + date)
   const dropdownList = resultsFullList.map(
     (e) => `${e.userinfo?.name ?? "Desconocido"} | ${e.date}`
   );
 
-  // 🔹 Cuando selecciona del dropdown
+  // When selecting from dropdown
   const handleSelect = (item: string) => {
     setSearchValue(item);
 
@@ -135,7 +135,7 @@ export default function ListReports() {
     setFilteredList(filtered);
   };
 
-  // 🔹 Cuando borra texto → mostrar todo
+  // When deleting text - show all
   const handleTyping = (text: string) => {
     setSearchValue(text);
 
@@ -158,12 +158,12 @@ export default function ListReports() {
         <ThemedView style={styles.container}>
 
           <DropdownSearch
-            data={dropdownList}               // 🔹 Toda la lista siempre
+            data={dropdownList}               // Always show full list
             value={searchValue}
             placeholder="Buscar por nombre, ID o fecha"
-            onChangeValue={handleTyping}      // 🔹 Filtra al escribir
+            onChangeValue={handleTyping}      // Filter when typing
             onSelect={handleSelect}
-            showList={false}             // 🔹 Filtra al seleccionar
+            showList={false}             // Filter when selecting
           />
 
           <FlatList
@@ -215,8 +215,7 @@ const styles = StyleSheet.create({
   container: { 
     flex: 1, 
     marginHorizontal: 20, 
-    marginBottom: 50, 
-    marginTop: 30 
+    marginTop: 20 
   },
   buttonsContainer: {
     flexDirection: 'row',

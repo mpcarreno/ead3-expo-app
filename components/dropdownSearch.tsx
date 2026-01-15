@@ -10,12 +10,12 @@ import { FlatList, StyleSheet, Text, TextInputProps, TouchableOpacity, View } fr
 export type DropdownSearchProps = TextInputProps & {
   lightColor?: string;
   darkColor?: string;
-  data: string[];                     // Lista que se filtra
-  value: string;                       // Valor del input
+  data: string[];                     // list of items
+  value: string;                       // Input value
   onChangeValue: (text: string) => void;
-  onSelect: (item: string) => void;    // Selección
-  noResultsText?: string;              // Texto "No existe"
-  onCreateNew?: () => void;            // Botón crear nuevo
+  onSelect: (item: string) => void;    // Item selected
+  noResultsText?: string;              // No results text
+  onCreateNew?: () => void;            // To create new item
   showList?: boolean;
 };
 
@@ -44,7 +44,7 @@ export default function DropdownSearch({
 
   return (
     <ThemedView>
-      {/* 🔹 INPUT */}
+      {/* INPUT */}
       <ThemedTextInput
         value={value}
         placeholder={placeholder}

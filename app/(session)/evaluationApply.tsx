@@ -38,12 +38,12 @@ export default function ApplyEvaluation() {
 
   const initialIndex = (range * 3) - 3;
 
-  // 🔹 Cargar preguntas
+  // Load questions
   useEffect(() => {
     setQuestions(loadQuestions(QuestionBanks, area));
   }, [area]);
 
-  // 🔹 Inicializar índice
+  // Initialize index
   useEffect(() => {
     if (questions.length > 0) {
       setCurrentIndex(initialIndex);
@@ -51,15 +51,15 @@ export default function ApplyEvaluation() {
     }
   }, [questions]);
 
-  // 🔹 Manejar respuesta
+  // Handle answer
   const handleAnswer = (answer: boolean) => {
     const questionId = questions[currentIndex].questionId;
-    const questionText = questions[currentIndex].question; // ⬅️ Guardamos la pregunta
+    const questionText = questions[currentIndex].question; // Save the question
 
     const updatedAnswers = addAnswer(answers, questionId, questionText, answer);
     setAnswers(updatedAnswers);
 
-    // 🔹 Calcular siguiente índice usando estado
+    // Calculate next index using state
     const { nextIndex, state } = getNextQuestionIndex(
       currentIndex,
       updatedAnswers,

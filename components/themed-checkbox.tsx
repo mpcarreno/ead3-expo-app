@@ -3,9 +3,9 @@ import React from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 
 type Props = {
-  label: string;          // Texto a mostrar
-  value: string;          // Valor de la opción
-  selected: boolean;      // Si está seleccionado
+  label: string;          // Text to show
+  value: string;          // option value
+  selected: boolean;      // if selected
   onSelect: (value: string) => void; // Callback
 };
 
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     height: 25,
     borderWidth: 2,
     borderColor: '#f4f4f4ff',
-    borderRadius: 8, // cambia a 10 para hacerlo redondo
+    borderRadius: 8, 
   },
   checked: {
     backgroundColor: "#4592f7ff",

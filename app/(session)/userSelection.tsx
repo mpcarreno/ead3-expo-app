@@ -86,7 +86,7 @@ export default function newEvaluation() {
     
   };
 
-  // 🔹 Limpiar card si el input cambia y no coincide con el seleccionado
+  // Clear card if input changes and does not match selected
   useEffect(() => {
     if (selectedId && selectedId.uid !== searchId) {
       setSelectedId(null);

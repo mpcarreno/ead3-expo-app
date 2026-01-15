@@ -32,8 +32,7 @@ export default function UserContextLayout() {
 
 
   const quickExit = () => {
-    // Reemplaza todo el stack con la pantalla inicial
-    router.replace('/'); // "/" es la pantalla index
+    router.replace('/'); // index
   };
 
   const headerLeftButton = () => (

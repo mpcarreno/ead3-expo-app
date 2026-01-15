@@ -47,7 +47,7 @@ export default function EvaluationButton({
             </ThemedText></ThemedText>
         </View>
 
-        {/* 🔥 ICONO DINÁMICO */}
+        {/* EVALUATION AREA BUTTON */}
         {isCompleted ? (
             <Ionicons name="checkmark-circle" size={30} color={completedBorder} />
         ) : (

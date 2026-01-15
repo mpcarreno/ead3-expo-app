@@ -14,7 +14,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 
-// Config de botones para evitar repetir código
+// Button configuration to avoid repeating code
 const evaluationButtons = [
   { key: "MG", title: "Motricidad Gruesa" },
   { key: "MF", title: "Motricidad Finoadaptativa" },
@@ -28,12 +28,12 @@ export default function EvaluationDashboard() {
   const evalDate = getShortDate();
   const CurrentAge = calculateAgeRange(currentUser.dob)
 
-  // Memo para evitar recrear este objeto en cada render
+  // Memo to avoid recreating this object on each render
   const emptyEvals = useMemo(() => createEmptyEvaluations(), []);
 
   const [evals, setEvals] = useState<EvaluationAreas>(emptyEvals);
 
-  // Cargar evaluaciones desde AsyncStorage
+  // Load evaluations from AsyncStorage
   useEffect(() => {
   if (!currentUser) return;
 
@@ -41,10 +41,10 @@ export default function EvaluationDashboard() {
     const result = await loadEvaluations(currentUser.uid, evalDate);
 
     if (result) {
-      // Sí hay algo guardado
+      // There is something saved
       setEvals(result);
     } else {
-      // No hay eval → cargar vacía
+      // No eval exists - load empty
       setEvals(createEmptyEvaluations());
     }
   };
@@ -61,7 +61,7 @@ export default function EvaluationDashboard() {
     );
   }
 
-  // Determinar si ya están todas completadas
+  // verify if all evaluations are completed
   const allDone = Object.values(evals).every((e) => e.completed);
 
   const goToEvaluation = useCallback(
@@ -83,7 +83,7 @@ export default function EvaluationDashboard() {
       <ScrollView style={{ flex: 1 }}>
         <ThemedView style={styles.container}>
 
-          {/* Información del paciente */}
+          {/* Patient information */}
           <SelectableCard noAction={true}>
             <ThemedText style={styles.label}>Datos del Paciente</ThemedText>
 
@@ -119,7 +119,7 @@ export default function EvaluationDashboard() {
             Complete las siguientes evaluaciones, una vez finalizadas presione "Generar reporte".
           </ThemedText>
 
-          {/* Botones generados dinámicamente */}
+          {/* Dynamically generated buttons */}
           {evaluationButtons.map(({ key, title }) => (
             <EvaluationButton
               key={key}
@@ -129,7 +129,7 @@ export default function EvaluationDashboard() {
             />
           ))}
 
-          {/* Botón de reporte */}
+          {/* Report button */}
           {allDone && (
             <Button
               label="Generar Reporte"
@@ -158,7 +158,7 @@ export default function EvaluationDashboard() {
   );
 }
 
-// ---------------- STYLES ----------------
+// Style definitions
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 20 },
   center: { flex: 1, justifyContent: "center", alignItems: "center" },

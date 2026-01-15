@@ -25,10 +25,10 @@ export default function Button({
   icon,
   onPress,
   width = '100%' as DimensionValue,
-  height = 60 as DimensionValue,
+  height = 65 as DimensionValue,
   backgroundColor = '#2596B5',
   textColor = '#ffffffff',
-  fontSize = 18,
+  fontSize = 19,
   borderRadius = 10,
   padding = 20,
   iconSize = 40,
@@ -90,11 +90,16 @@ const styles = StyleSheet.create({
   buttonContainer: {
     width: '100%',
     alignItems: 'center',
+    shadowColor: '#4c4c4c',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+    elevation: 5,
   },
   buttonPressed: {
     opacity: 0.5,
   },
   buttonLabel: {
-    fontWeight: '500',
+    fontWeight: '600',
   },
 });

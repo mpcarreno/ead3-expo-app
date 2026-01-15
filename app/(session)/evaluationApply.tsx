@@ -97,11 +97,8 @@ export default function ApplyEvaluation() {
         <ThemedView style={styles.container}>
 
           <View style={styles.fixedContainer}>
-          <ThemedText style={styles.title}>
-                {evaluationName[area]}
-              </ThemedText>
-              <ThemedText style={{textAlign: 'center'}}>Conteste las siguientes preguntas teniendo en cuenta si cumple o no el Criterio de respuesta.
-              </ThemedText>
+            <ThemedText style={[styles.title, {fontSize: 25}]}>{evaluationName[area]}</ThemedText>
+            <ThemedText style={{textAlign: 'center'}}>Evalue al paciente teniendo en cuenta los criterios de observación y respuesta.</ThemedText>
           </View>
 
           <View style={styles.questionContainer}>
@@ -175,7 +172,7 @@ const styles = StyleSheet.create({
   buttonsContainer: {
     flexDirection: "row",
     justifyContent: "space-around",
-    marginBottom: 20,
+    marginVertical: 20,
     marginHorizontal: 20,
     gap: 70,
     verticalAlign: 'bottom',
@@ -205,7 +202,7 @@ const styles = StyleSheet.create({
 
   title: {
     fontFamily: Fonts.sans,
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: '700',
     marginVertical: 10,
     textAlign: "center",

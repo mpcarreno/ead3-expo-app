@@ -17,27 +17,25 @@ export default function HomeScreen() {
       }>
       
       <ThemedView style={styles.textContainer}>
-        <ThemedText type="default"> ¿Qué deseas hacer ahora? </ThemedText>
+        <ThemedText type="title" style={{fontSize: 20}}> ¿Qué deseas hacer? </ThemedText>
       </ThemedView>
+  
       
       
         <ThemedView style={styles.buttonContainer}>
           <Button 
             width={280}
-            fontSize={18}
             icon="person.crop.circle.badge.plus" 
-            label="Crear Nuevo Usuario"
+            label="Registrar Paciente"
             path="/userCreation"/>
         </ThemedView>
-      
-
-      <ThemedView style={styles.buttonContainer}>
-        <Button 
-        width={280}
-        icon="document.badge.plus" 
-        label="Iniciar Nueva Evaluacion"
-        path="/(session)/userSelection"/>
-      </ThemedView>
+        <ThemedView style={styles.buttonContainer}>
+          <Button 
+          width={280}
+          icon="document.badge.plus" 
+          label="Comenzar Evaluación"
+          path="/(session)/userSelection"/>
+        </ThemedView>
       
       
     </ParallaxScrollView>
@@ -50,6 +48,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
+    marginBottom: 20,
   },
   buttonContainer: {
     flex: 1,

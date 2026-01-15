@@ -17,6 +17,26 @@ EAD3 App is designed to streamline the assessment of child development for healt
 - **User Management**: Store and manage multiple patient evaluations
 - **Data Persistence**: Save evaluations for future reference and tracking
 
+## Screenshots
+
+### Home Screen
+![Home Screen](assets/images/screen_home.jpeg)
+
+### Patient Selection
+![Patient Selection](assets/images/screen_patientselection.jpeg)
+
+### Patient Creation
+![Patient Creation](assets/images/screen_patientcreation.jpeg)
+
+### Evaluation Dashboard
+![Evaluation Dashboard](assets/images/screen_evaldashboard.jpeg)
+
+### Apply Evaluation
+![Apply Evaluation](assets/images/screen_applyeval.jpeg)
+
+### Evaluation Report
+![Evaluation Report](assets/images/screen_report.jpeg)
+
 ## Technology Stack
 
 - **Framework**: React Native with Expo

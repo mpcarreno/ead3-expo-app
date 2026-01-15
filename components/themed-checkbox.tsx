@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     borderRadius: 8, 
   },
   checked: {
-    backgroundColor: "#4592f7ff",
+    backgroundColor: "#2596B5",
   },
   label: {
     marginLeft: 8,

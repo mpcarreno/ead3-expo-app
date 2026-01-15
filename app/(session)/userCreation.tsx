@@ -116,8 +116,8 @@ export default function UserCreation() {
         
         <ScrollView style={{ flex: 1 }}>
           <ThemedView style={styles.container}>
-            <ThemedText style={styles.text}>Diligencia todos los campos</ThemedText>
-            <Spacer height={20} />
+            <ThemedText style={{ fontSize: 17 }}>Diligencia todos los campos obligatorios</ThemedText>
+            <Spacer height={15} />
 
             {/* Identification type selection */}
             <ThemedText style={styles.text}>Tipo de identificación <ThemedText style={{color: '#ff0000ff'}}>*</ThemedText></ThemedText>
@@ -165,7 +165,8 @@ export default function UserCreation() {
             />
 
             {/* Premature */}
-            <ThemedText style={styles.text}>¿Paciente Prematuro? <ThemedText style={{color: '#ff0000ff'}}>*</ThemedText> <ThemedText style={{opacity: 0.8}}>(Menor a 37 semanas)</ThemedText> </ThemedText>
+            <ThemedText style={styles.text}>¿Paciente Prematuro? <ThemedText style={{color: '#ff0000ff'}}>*</ThemedText>  </ThemedText>
+            <ThemedText style={{opacity: 0.7, fontSize: 13}}>(Nacido con menos de a 37 semanas de gestación)</ThemedText>
             <ThemedView style={styles.checkBoxContainer}>
               {IsPrematureOptions.map((o) => (
                 <ThemedCheckBox key={o} label={o} value={o} selected={isPremature === o} onSelect={setIsPremature} />
@@ -192,7 +193,7 @@ export default function UserCreation() {
 
             <Spacer height={20} />
 
-            <Button  label="Crear Usuario" onPress={onSave} />
+            <Button  fontSize={20} label="Crear Paciente" onPress={onSave} />
             
           </ThemedView>
         </ScrollView>
@@ -203,7 +204,7 @@ export default function UserCreation() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding:20, marginBottom: 50  },
-  text: { marginTop: 10},
+  text: { marginTop: 10,},
   mandatory: { color: "red"},
   inputError: { borderColor: "red", borderWidth: 2 },
   dateContainer: { flexDirection: 'row', gap: 20, alignSelf: 'center' },

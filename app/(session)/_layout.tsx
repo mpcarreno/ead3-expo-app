@@ -49,7 +49,7 @@ export default function UserContextLayout() {
               name="userCreation" 
               options={{ 
                 headerShown: true , 
-                title:'Creacion de Usuario',
+                title:'Nuevo Paciente',
                 headerLeft: headerLeftButton
                 }} 
               /> 
@@ -58,7 +58,7 @@ export default function UserContextLayout() {
               name="userSelection" 
               options={{ 
                 headerShown: true , 
-                title:'Seleccion de Usuario',
+                title:'Selección de Paciente',
                 headerLeft: headerLeftButton
                 }} />  
 
@@ -66,7 +66,7 @@ export default function UserContextLayout() {
               name="evaluationDashboard"
               options={{
                 headerShown: true,
-                title: 'Evaluación',
+                title: 'Evaluaciones',
                 headerRight: headerRightButton
               }}
             />
@@ -75,7 +75,7 @@ export default function UserContextLayout() {
               name="evaluationApply"
               options={{
                 headerShown: true,
-                title: 'Preguntas',
+                title: '',
                 headerRight: headerRightButton
               }}
             />   
@@ -84,7 +84,7 @@ export default function UserContextLayout() {
               name="evaluationReport"
               options={{
                 headerShown: true,
-                title: 'Preguntas',
+                title: 'Reporte de Evaluación',
                 headerRight: headerRightButton
               }}
             />             

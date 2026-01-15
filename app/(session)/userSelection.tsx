@@ -149,7 +149,8 @@ export default function newEvaluation() {
             )}
 
           {cardSelected && !existingReport && (
-              <Button
+              <Button 
+              fontSize={20}
               style={styles.continueButton}
               label= "Continuar"
               onPress={async () => {

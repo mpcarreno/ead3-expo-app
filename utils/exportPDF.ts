@@ -5,11 +5,11 @@ import * as Sharing from "expo-sharing";
 import { captureRef } from "react-native-view-shot";
 
 /**
- * Captura una vista con ViewShot, genera un PDF desde esa imagen
- * y permite compartirlo sin usar rutas de FileSystem.
+ * Captures a view with ViewShot, generates a PDF from that image
+ * and allows sharing it without using FileSystem routes.
  *
- * @param viewRef - referencia a un ViewShot
- * @param fileName - nombre sugerido del PDF
+ * @param viewRef - reference to a ViewShot
+ * @param fileName - suggested name for the PDF
  */
 export async function exportPDF(
   viewRef: any,
@@ -20,14 +20,14 @@ export async function exportPDF(
       throw new Error("La referencia del ViewShot es inválida.");
     }
 
-    // 1) Capturar la vista como base64
+    // 1) Capture the view as base64
     const base64 = await captureRef(viewRef, {
       format: "png",
       quality: 1,
       result: "base64",
     });
 
-    // 2) Crear HTML para incrustar la imagen
+    // 2) Create HTML to embed the image
     const html = `
       <html>
         <head>
@@ -43,17 +43,17 @@ export async function exportPDF(
       </html>
     `;
 
-    // 3) Convertir HTML a PDF temporal
+    // 3) Convert HTML to temporary PDF
     const { uri: pdfUri } = await Print.printToFileAsync({
       html,
     });
 
-    console.log("PDF generado temporalmente:", pdfUri);
+    console.log("PDF generated temporarily:", pdfUri);
 
-    // 4) Compartir el archivo PDF
+    // 4) Share the PDF file
     const sharingAvailable = await Sharing.isAvailableAsync();
     if (!sharingAvailable) {
-      throw new Error("El sistema no permite compartir archivos.");
+      throw new Error("The system does not allow sharing files.");
     }
 
     await Sharing.shareAsync(pdfUri, {
@@ -64,7 +64,7 @@ export async function exportPDF(
 
     return pdfUri;
   } catch (error) {
-    console.error("Error al generar PDF desde ViewShot:", error);
+    console.error("Error generating PDF from ViewShot:", error);
     throw error;
   }
 }
